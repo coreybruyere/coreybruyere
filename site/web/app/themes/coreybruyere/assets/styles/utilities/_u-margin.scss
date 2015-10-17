@@ -1,0 +1,65 @@
+/**
+
+  @u-margin
+--------------------------------------------------------
+  utilities/_u-margin.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Margin helper classes
+
+-----------------------------------------------------  */
+
+.u-margin {
+  &-t {
+    &-none   { margin-top: 0; }
+    // &-xs     { margin-top: u(rem($base-unit / 8)); }
+    &-sm     { margin-top: u(rem($base-unit / 6)); }
+    // &-md     { margin-top: u(rem($base-unit / 4)); }
+    &-lg     { margin-top: u(rem($base-unit / 3)); }
+    // &-xl     { margin-top: u(rem($base-unit / 2)); }
+    &-xxl    { margin-top: u(rem($base-unit / 1)); }
+  }
+
+  &-r {
+    &-none   { margin-right: 0; }
+    // &-xs     { margin-right: u(rem($base-unit / 8)); }
+    &-sm     { margin-right: u(rem($base-unit / 6)); }
+    // &-md     { margin-right: u(rem($base-unit / 4)); }
+    &-lg     { margin-right: u(rem($base-unit / 3)); }
+    // &-xl     { margin-right: u(rem($base-unit / 2)); }
+    &-xxl    { margin-right: u(rem($base-unit / 1)); }
+  }
+
+  &-b {
+    &-none   { margin-bottom: 0; }
+    // &-xs     { margin-bottom: u(rem($base-unit / 8)); }
+    &-sm     { margin-bottom: u(rem($base-unit / 6)); }
+    // &-md     { margin-bottom: u(rem($base-unit / 4)); }
+    &-lg     { margin-bottom: u(rem($base-unit / 3)); }
+    // &-xl     { margin-bottom: u(rem($base-unit / 2)); }
+    &-xxl    { margin-bottom: u(rem($base-unit / 1)); }
+  }
+
+  &-l {
+    &-none   { margin-left: 0; }
+    // &-xs     { margin-left: u(rem($base-unit / 8)); }
+    &-sm     { margin-left: u(rem($base-unit / 6)); }
+    // &-md     { margin-left: u(rem($base-unit / 4)); }
+    &-lg     { margin-left: u(rem($base-unit / 3)); }
+    // &-xl     { margin-left: u(rem($base-unit / 2)); }
+    &-xxl    { margin-left: u(rem($base-unit / 1)); }
+  }
+
+  &-all {
+    &-none   { margin: 0; }
+    // &-xs     { margin: u(rem($base-unit / 8)); }
+    &-sm     { margin: u(rem($base-unit / 6)); }
+    // &-md     { margin: u(rem($base-unit / 4)); }
+    &-lg     { margin: u(rem($base-unit / 3)); }
+    // &-xl     { margin: u(rem($base-unit / 2)); }
+    &-xxl    { margin: u(rem($base-unit / 1)); }
+  }
+}

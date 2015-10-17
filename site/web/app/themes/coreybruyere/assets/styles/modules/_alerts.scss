@@ -1,0 +1,147 @@
+/**
+
+  @alerts
+---------------------------------------------------------
+  modules/_alerts.scss
+--------------------------------------------------------
+
+  Alerts are UI elements that give important info
+
+  Example: Error
+  <div class="alert alert--error">
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Uh oh - something went wrong</p>
+  </div>
+
+  Example: Warning
+  <div class="alert alert--warning">
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Shake it fast, but watch yourself.</p>
+  </div>
+
+  Example: Success
+  <div class="alert alert--success">
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">The secret to my success is that I learn, 25 hours a day!</p>
+  </div>
+
+  Example: Info
+  <div class="alert alert--info">
+    <a href="#" class="alert__close">&times;</a>
+    <p class="alert__msg">Did you ever know that you're my hero?</p>
+  </div>
+
+  NOTE: The code below uses declared color units, if you'd
+        prefer, declare those as variables in _vars.scss
+
+------------------------------------------------------ */
+
+
+.alert {
+  position: relative;
+  margin-bottom: u(rem($base-unit));
+  padding: u(rem(5)) u(rem(15));
+  border: 2px solid transparent;
+  border-radius: 4px;
+  line-height: 1.25;
+}
+
+
+// Alert text
+.alert__msg {
+  margin: 0;
+}
+
+
+// Close buttons in alert
+.alert__close {
+  position: absolute;
+  top: u(rem(15));
+  right: u(rem(15));
+  width: u(rem(20));
+  height: u(rem(20));
+  transition: all .3s;
+  background-color: $color__white;
+  text-align: center;
+  text-decoration: none;
+  opacity: .5;
+  &:hover {
+    opacity: 1;
+  }
+
+  // Close button color for diff alerts
+  .alert--error & {
+    color: $color__error;
+  }
+
+  .alert--warning {
+    color: $color__warning;
+  }
+
+  .alert--info {
+    color: $color__info;
+  }
+
+  .alert--success {
+    color: $color__success;
+  }
+}
+
+
+
+
+// Error alert
+//
+.alert--error {
+  border-color: $color__error;
+  background: $color__offwhite;
+  color: $color__error;
+  // Color of line {
+  &:after {
+    border-color: $color__error;
+  }
+}
+
+
+
+// Warning alert
+//
+.alert--warning {
+  border-color: $color__warning;
+  background: $color__offwhite;
+  color: $color__warning;
+  // Color of line {
+  &:after {
+    border-color: $color__warning;
+  }
+}
+
+
+
+// Info alert
+//
+.alert--info {
+  border-color: $color__info;
+  background: $color__offwhite;
+  color: $color__info;
+  // Color of line
+  &:after {
+    border-color: $color__info;
+  }
+}
+
+
+
+// Success alert
+//
+.alert--success {
+  border-color: $color__success;
+  background: $color__offwhite;
+  color: $color__success;
+  // Color of line
+  &:after {
+    border-color: $color__success;
+  }
+}
+
+

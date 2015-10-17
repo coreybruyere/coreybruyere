@@ -1,0 +1,38 @@
+/**
+
+  @textarea
+---------------------------------------------------------
+  elements/_textarea.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for all textarea elements
+
+  The next layer of complex form styling can be found in
+  modules/_forms.scss
+
+--------------------------------------------------------- */
+
+
+/* @textareas
+--------------------------------------------------------
+
+  Base styling for textareas
+
+  Example: Textarea
+  <textarea name="schramburger">Hello, there.</textarea>
+
+------------------------------------------------------ */
+
+textarea {
+  @include font-family($serif);
+  width: 100%;
+  min-height: u(rem(96));
+  padding: u(rem(10));
+  border: solid u(rem(1)) $color__black;
+  text-rendering: optimizeLegibility;
+  &:focus {
+    outline: none;
+  }
+}
+

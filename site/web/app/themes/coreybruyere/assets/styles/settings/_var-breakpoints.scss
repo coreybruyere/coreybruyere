@@ -1,0 +1,55 @@
+/**
+
+  @var-breakpoints
+--------------------------------------------------------
+  settings/_var-breakpoints.scss
+--------------------------------------------------------
+
+  This is a variable settings partial.
+
+  Define global breakpoints as xs, sm, md, lg, xl, xxl
+
+-----------------------------------------------------  */
+
+// Define breakpoints map to help with some other functions
+$breakpoints: (
+ n:  0,
+ xs: 320,
+ sm: 550,
+ md: 768,
+ lg: 1024,
+ xl: 1256,
+ xxl: 1600
+);
+
+
+// Define individual variables
+//
+// Extra Small: Small mobile
+$small-mobile: map-get($breakpoints, xs);
+
+// Small: Larger mobile
+$mobile: map-get($breakpoints, sm);
+
+// Medium: Tablet
+$tablet: map-get($breakpoints, md);
+
+// Large: Landscape tablet, beginning desk size
+$small-desktop: map-get($breakpoints, lg);
+
+// Extra Large: Large Desk size
+$desktop: map-get($breakpoints, xl);
+
+// Double Extra Large: Huge Desk size
+$large-desktop: map-get($breakpoints, xxl);
+
+// Orientation Media Queries
+//
+// Landscape Orientation
+$landscape: "only screen and (orientation: landscape)" !default;
+
+// Portrait Orientation
+$portrait: "only screen and (orientation: portrait)" !default;
+
+
+

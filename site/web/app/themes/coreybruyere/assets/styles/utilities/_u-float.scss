@@ -1,0 +1,25 @@
+/**
+
+  @u-float
+--------------------------------------------------------
+  utilities/_u-float.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Float helpers
+
+-----------------------------------------------------  */
+
+.u-float-left {
+  float: left !important;
+}
+
+.u-float-right {
+  float: right !important;
+}
+
+.u-float-none {
+  float: none !important;
+}

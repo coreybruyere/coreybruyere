@@ -1,0 +1,17 @@
+/**
+
+  @u-circle
+--------------------------------------------------------
+  utilities/_u-circle.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Add a circle border radius to anything!
+
+-----------------------------------------------------  */
+
+.u-circle {
+  border-radius: 50%;
+}

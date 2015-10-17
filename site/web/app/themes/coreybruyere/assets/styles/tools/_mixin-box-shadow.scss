@@ -1,0 +1,22 @@
+
+/**
+
+  @box-shadow
+--------------------------------------------------------
+  tools/_mixin-box-shadow.scss
+--------------------------------------------------------
+
+// No custom settings for this yet. General 'material'
+box shadow
+// Usage: @include bow-shadow();
+
+------------------------------------------------------ */
+
+@mixin box-shadow() {
+  box-shadow: 
+    0 2px 0 -1px rgba($color__black, .15);
+    // 0 u(rem(2)) u(rem(4)) 0 rgba($color__black, .10);
+}
+
+
+

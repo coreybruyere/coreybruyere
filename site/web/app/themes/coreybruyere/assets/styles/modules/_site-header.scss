@@ -1,0 +1,34 @@
+/**
+
+  @site-header
+--------------------------------------------------------
+  modules/_site-header.scss
+--------------------------------------------------------
+
+  Site-wide header
+
+------------------------------------------------------ */
+
+.site-header {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 u(rem($base-unit));
+  z-index: 9999;
+  align-items: center;
+  justify-content: space-between;
+  // backface-visibility: hidden;
+
+  // Scoped class for single pages
+  .s-single & {
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+/**
+
+  @tabs
+--------------------------------------------------------
+  modules/_tabs.scss
+--------------------------------------------------------
+
+  Tab styled navigation. If using JS make sure to place
+  states at the bottom
+
+  Example: Tabs
+  <ul class="tabs">
+    <li>Tab item
+    <li>Another tab item
+  </ul>
+------------------------------------------------------ */
+// scss-lint:disable PropertyUnits
+
+.tabs {
+  display: table;
+  width: 100%;
+  margin: 0;
+  background-color: $color__grey;
+  line-height: 2;
+  text-align: center;
+  table-layout: fixed;
+  list-style-type: none;
+
+  // tab children always are <li>
+  > li {
+    display: table-cell; 
+    border: 0 solid rgba($color__black, .085);
+    border-width: 0 1px;
+    border-right-color: rgba($color__white, .085);  
+    vertical-align: middle;
+  }
+}
+
+// <a> inside of tabs
+.tabs__link {
+  display: block;  
+  padding: u(rem(5)) 0;
+}
+
+// icon or image in tabs
+.tabs__media {
+  display: block; 
+  width: auto;
+  max-width: u(rem(50));
+  max-height: u(rem(25)); 
+  margin: auto;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    max-width: u(rem(80));
+    max-height: u(rem(40));  
+  }
+}

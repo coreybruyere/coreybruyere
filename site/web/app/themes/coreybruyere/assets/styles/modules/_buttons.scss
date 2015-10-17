@@ -1,0 +1,213 @@
+/**
+
+  @buttons
+--------------------------------------------------------
+  bits/_buttons.scss
+--------------------------------------------------------
+
+  Buttons are a common UI component in sites/apps.  They
+  are usually either anchor, button, or input elements
+  with a classname of 'btn'.  They provide an easily
+  identified clickable target.
+
+  Buttons commonly have modifying classes that apply
+  specific styles.  Examples of these are .btn--large and
+  .btn--inline
+
+  Example: Buttons using anchors
+  <p><a href="#" class="btn">Regular Button</a></p>
+
+  Example: Buttons using buttons
+  <p><button class="btn">Regular Button</button></p>
+
+------------------------------------------------------ */
+
+.btn {
+  @include font-family($serif, normal);
+  display: inline-block;
+  padding: u(rem(9));
+  transition: all .25s ease-in-out;
+  border: 2px solid $color__orange;
+  border-radius: 4px;
+  background: $color__orange;
+  color: $color__white;
+  letter-spacing: u(rem(1));
+  line-height: inherit;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: visible;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    opacity: .85;
+  }
+}
+
+
+
+
+
+/* @btn--secondary
+--------------------------------------------------------
+
+  A btn modifier, secondary
+
+  Example: .btn--secondary
+  <a class="btn btn--secondary">Secondary button</a>
+
+------------------------------------------------------ */
+
+.btn--secondary {
+  border-color: $color__orange;
+  background: transparent;
+  color: $color__orange;
+}
+
+
+
+
+/* @btn--ghost
+--------------------------------------------------------
+
+  A btn ghost modifier. Use on dark color bg
+
+  Example: .btn--ghost
+  <a class="btn btn--ghost">Ghost button</a>
+
+------------------------------------------------------ */
+
+.btn--ghost {
+  position: relative;
+  transition: color .25s ease-in-out;
+  border-color: $color__white;
+  background-color: transparent;
+  overflow: hidden;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 0 100%;
+    transform: skewX(-16deg) translate(-120%, 0);
+    transition: transform .25s ease-in-out;
+    background-color: $color__white;
+    content: '';
+    z-index: -1;
+  }
+  &:hover,
+  &:active {
+    color: $color__orange;
+    &:before {
+      transform: skewX(-16deg) translate(-20%, 0);
+    }
+  }
+}
+
+
+
+
+/* @btn--large
+--------------------------------------------------------
+
+  A btn modifier, large
+
+  Example: .btn--large
+  <a class="btn btn--large">Large button</a>
+
+------------------------------------------------------ */
+
+.btn--large {
+  // Min Width @ $small-mobile
+  @include bp-at-least($small-mobile) {
+    padding: u(rem(16)) u(rem(20));
+    font-size: u(rem(16));
+  }
+}
+
+
+
+
+
+/* @btn--small
+--------------------------------------------------------
+
+  A btn modifier, small
+
+  Example: .btn--small
+  <a class="btn btn--small">Small button</a>
+
+------------------------------------------------------ */
+
+.btn--small {
+  padding: u(rem(2)) u(rem(4));
+}
+
+
+
+
+/* @btn--inline
+--------------------------------------------------------
+
+  A btn modifier, if this button is in a paragraph or
+  in anything else that has a defined font-size, this
+  modifier will make the btn inherit the font-size of
+  the partent.
+
+  Example: .btn--inline
+  <p>Here's some text <a class="btn btn--inline">Cool button</a> text keeps going</p>
+
+------------------------------------------------------ */
+
+.btn--inline {
+  font-size: inherit;
+}
+
+
+
+
+
+/* @btn--block
+--------------------------------------------------------
+
+  A btn modifier - makes the button display block, 100%
+  width and aligns the text to the center.  Removes left
+  and right padding since the text is center aligned, it
+  is not needed.  Actually sometimes having the padding
+  on the left and right causes problems if the centered
+  text is quite long - so we just remove it.
+
+  Example: .btn--block
+  <a href="#" class="btn btn--block">Block button</a>
+
+------------------------------------------------------ */
+
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+
+
+
+
+/* @btn--inherit
+--------------------------------------------------------
+
+
+
+------------------------------------------------------ */
+
+.btn--inherit {
+  border-color: inherit;
+  color: inherit;
+}
+
+
+

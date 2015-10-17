@@ -1,0 +1,39 @@
+/**
+
+  @section
+--------------------------------------------------------
+  modules/_section.scss
+--------------------------------------------------------
+
+  Blog section styling - .section being the class that wraps around each article item
+
+-----------------------------------------------------  */
+
+// Sections with padding & relative positioning
+// Used in conjunction with slant seperators
+//
+.section {
+  position: relative;
+  // padding-top: u(rem($base-unit));     
+  padding-bottom: u(rem($base-unit));  
+  // border-top: 1px solid $color__offwhite;  
+  border-bottom: 1px solid $color__grey;
+  // The top hero always had margin instead
+  &:first-of-type {
+    padding: 0; 
+    border-top: 0;
+    border-bottom: 0;
+  } 
+  &:nth-child(odd) {
+    background-color: $color__white; 
+  }
+}
+
+// .section__title {
+//   display: table;
+//   margin-right: auto;
+//   margin-left: auto;
+//   border-bottom: 3px solid $color__turqoise--trans;
+//   color: $color__black--light;
+//   text-align: center;
+// }

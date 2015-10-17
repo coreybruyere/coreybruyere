@@ -1,0 +1,29 @@
+/**
+
+   @html
+--------------------------------------------------------
+  bits/_html.scss
+--------------------------------------------------------
+
+  HTML should contain the site's default background color
+  and font-size
+
+------------------------------------------------------ */
+
+html {
+  height: 100%;
+  // background-color: $color__turqoise;
+  box-sizing: border-box;
+}
+
+// Border box sizing on all elements
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+
+
+

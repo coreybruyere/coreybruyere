@@ -1,0 +1,29 @@
+/**
+
+  @l-full-bleed
+--------------------------------------------------------
+  layouts/_l-full-bleed.scss
+--------------------------------------------------------
+
+  Layout object to full bleed child items of island,
+  islet, container, or any class that uses a global
+  padding variable.
+
+-----------------------------------------------------  */
+
+.l-full-bleed {
+  margin-right: u(rem(-$base-unit));
+  margin-left: u(rem(-$base-unit));
+
+  // full bleed with parent island
+  .l-island & {
+    margin-right: u(rem(-$base-unit));
+    margin-left: u(rem(-$base-unit));
+  }
+
+  // full bleed with parent islet
+  .l-islet & {
+    margin-right: u(rem(-$base-unit / 2));
+    margin-left: u(rem(-$base-unit / 2));
+  }
+}

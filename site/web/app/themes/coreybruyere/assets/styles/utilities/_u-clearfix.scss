@@ -1,0 +1,17 @@
+/**
+
+  @u-clearfix
+--------------------------------------------------------
+  utilities/_u-clearfix.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Clearfix is used on the parent of floated items.
+
+-----------------------------------------------------  */
+
+.u-clearfix {
+  @include clearfix();
+}

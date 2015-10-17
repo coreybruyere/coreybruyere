@@ -1,0 +1,35 @@
+/**
+
+   @alt-links
+--------------------------------------------------------
+  modules/_alt-links.scss
+--------------------------------------------------------
+
+  Alternative link class for a tags
+
+------------------------------------------------------ */
+
+.alt-link {
+  display: inline-block;
+  color: inherit;
+  z-index: 99;
+}
+
+.alt-link--border {
+  &:after {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 3px solid $color__orange--trans;
+    content: '';
+    z-index: -1;
+  }
+  &:hover,
+  &:focus {
+    opacity: .75;
+  }
+}
+

@@ -1,0 +1,107 @@
+/**
+
+  @feature
+--------------------------------------------------------
+  modules/_feature.scss
+--------------------------------------------------------
+
+  Feature Items on figure elements found on home page
+
+------------------------------------------------------ */
+
+
+.feature {
+  position: relative;
+  margin: 0 0 u(rem($base-unit));
+  padding: u(rem($base-unit / 2));
+  background-color: $color__grey;
+  overflow: hidden;
+  &:hover,
+  &:active,
+  &:focus {
+    // Change child items on hover
+    .feature__after {
+      // opacity: .25;
+    }
+  }
+}
+
+.feature__item {
+  max-width: u(rem($wide-container__max-width));
+  min-height: u(rem(200));
+}
+
+.feature__text {
+  margin: 0 0 u(rem($base-margin));
+  text-align: left;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    top: 0;
+    // width: 80%;
+
+    // Scoped Even Parent
+    .s-even & {
+      // text-align: left;
+    }
+
+    // Scoped Odd Parent
+    .s-odd & {
+      // text-align: right;
+    }
+  }
+}
+
+// Position modifier for heading and button only block
+.feature__text--positioned {
+  position: absolute;
+  top: auto;
+  right: u(rem($base-unit));
+  left: 0;
+  color: $color__white;
+  text-align: right;
+  z-index: 99;
+  // -- Min Width @ $small-mobile
+  @include bp-at-least($small-mobile) {
+    bottom: u(rem(70));
+  }
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    top: auto;
+    bottom: u(rem($base-unit * 2));
+  }
+}
+
+// Half size layout dependent on scoped parent
+.feature__info {
+  margin-top: u(rem($base-unit));
+}
+
+.feature__column {
+  display: inline-block;
+  margin-right: u(rem($base-unit * 2));
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+// Element that receives background color
+.feature__after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .5s ease;
+  // background-color: rgba($color__black--light, 1);
+  background-image: linear-gradient(to bottom, rgba($color__black--light, 0), rgba($color__black--light, 1));
+  opacity: .35;
+  backface-visibility: hidden;
+}
+
+
+
+
+
+

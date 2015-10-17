@@ -1,0 +1,25 @@
+/**
+
+  @u-text-align
+--------------------------------------------------------
+  utilities/_u-text-align.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Text alignment helper classes
+
+-----------------------------------------------------  */
+
+.u-text {
+  &-center {
+    text-align: center;
+  }
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
+}

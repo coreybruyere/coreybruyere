@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "../../bower_components/normalize-css/normalize.css",
+        "styles/screen.scss"
+      ],
+      "main": true
+    },
+    "critical.css": {
+      "files": [
+        "styles/screen-critical.scss"
+      ]
+    },
+    "modernizr.js": {
+      "bower": ["modernizr"]
+    },
+    "picturefill.js": {
+      "bower": ["picturefill"]
+    }
+  },
+  "config": {
+    "devUrl": "http://corey.dev"
+  }
+}

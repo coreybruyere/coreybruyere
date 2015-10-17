@@ -1,0 +1,24 @@
+/**
+
+  @var-spacing
+--------------------------------------------------------
+  settings/_var-spacing.scss
+--------------------------------------------------------
+
+  This is a variable settings partial.
+
+  Global spacing units.
+  Define a value for $base-unit.  $base-unit is a helpful little
+  variable that serves to keep your spacing consistent.
+
+  Most often, 1 $base-unit is equal to your baseline height.  So
+  if your baseline height is 24px, that's
+  the value of 1 $base-unit. T
+
+-----------------------------------------------------  */
+
+$base-unit:   24 !global; // used in rem function
+$base-margin: 15 !global; // used in rem function
+
+
+

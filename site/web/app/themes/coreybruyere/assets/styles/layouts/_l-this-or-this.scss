@@ -1,0 +1,39 @@
+/**
+
+  @l-this-or-this
+--------------------------------------------------------
+  layouts/_l-this-or-this.scss
+--------------------------------------------------------
+
+  This or this
+  https://github.com/csswizardry/inuit.css/blob/master/objects/_this-or-this.scss
+
+------------------------------------------------------ */
+
+.l-this-or-this {
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+
+.l-this-or-this__this,
+.l-this-or-this__or {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.l-this-or-this__this {
+  &:first-of-type {
+    text-align: right;
+  }
+  &:last-of-type {
+    text-align: left;
+  }
+}
+
+.l-this-or-this__or {
+  max-width: u(rem(30));
+  padding-right: u(rem(5));
+  padding-left: u(rem(5));
+}
+

@@ -1,0 +1,18 @@
+/**
+
+  @u-muted
+--------------------------------------------------------
+  utilities/_u-muted.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Mute an object by reducing its opacity
+
+-----------------------------------------------------  */
+
+.u-muted {
+  opacity: .45 !important;
+  filter: alpha(opacity = 45) !important;
+}

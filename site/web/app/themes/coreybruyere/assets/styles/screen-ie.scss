@@ -1,0 +1,25 @@
+/****
+
+  IE STYLESHEET for Corey Bruyere's Portfolio
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+
+/***
+
+  @config
+---------------------------------------------------------
+
+  Config for IE stylesheet. Declares variable to compile legacy
+  browser stylesheet
+
+-----------------------------------------------------  */
+
+$old-ie: true;
+$px-only: true;
+
+// Import stylesheet but use pixels
+//
+@import 'screen';

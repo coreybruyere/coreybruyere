@@ -1,0 +1,45 @@
+/**
+
+  @import-fonts
+--------------------------------------------------------
+  settings/_import-fonts.scss
+--------------------------------------------------------
+
+  Define fonts from a library. Font variables can be found
+  in the vars folder and font mixins in /tools/_mixin-font-family.scss
+
+  If you are using a webfont, use the @embed-font() mixin
+  from /tools/_mixin-font-face-importer.scss
+
+-------------------------------------------------------- */
+
+
+
+
+/* @sans
+--------------------------------------------------------
+
+  This is your basic sans font.
+
+  Usage: Include font stack in /settings/vars.scss
+------------------------------------------------------ */
+
+// Get Quando from Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Quando);
+
+
+
+
+/* @serif
+--------------------------------------------------------
+
+  This is your basic serif font.
+
+  Usage: Include font stack in /settings//vars.scss
+
+-------------------------------------------------------- */
+
+// Get Lato
+@import url(http://fonts.googleapis.com/css?family=Lato:700,900);
+
+

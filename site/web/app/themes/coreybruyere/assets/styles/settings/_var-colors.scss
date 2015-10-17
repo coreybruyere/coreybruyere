@@ -1,0 +1,48 @@
+/**
+
+  @var-colors
+--------------------------------------------------------
+  settings/_var-colors.scss
+--------------------------------------------------------
+
+  This is a variable settings partial.
+
+  All color variables are defined here.
+
+  We use real color names here.  Although naming something
+  like 'brand' is in fact more generic and reusable, we've
+  found that you end up creating variables like $brand-2,
+  $brand-alt, $brand-complimentary etc.  While coding,
+  it's too easy to forget what those mean.
+
+  If the design changes drastically and the brand changes
+  from, let's say, blue to green, just do a global
+  find/replace - that's what text editors are for.
+
+-----------------------------------------------------  */
+
+// Colors
+$color__black: #000;
+$color__black--light: #515554;
+$color__grey: #acacac;
+$color__grey--light: #cfd2d2;
+$color__offwhite: #f1f1f1;
+$color__white: #fff;
+$color__error: #e74c3c;
+$color__warning: #f1c40f;
+$color__info: #2980b9;
+$color__success: #27ae60;
+
+// Brand Colors
+$color__turqoise: #009688;
+$color__turqoise--light: #84cbc5;
+$color__orange: #FF9800;
+
+// Transparent Colors
+$color__grey--trans: rgba($color__grey, .15);
+$color__turqoise--trans: rgba($color__turqoise, .45);
+$color__orange--trans: rgba($color__orange, .75);
+
+
+
+

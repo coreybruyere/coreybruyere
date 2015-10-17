@@ -1,0 +1,47 @@
+
+/**
+
+  @unit
+--------------------------------------------------------
+  -base/_function-u.scss
+--------------------------------------------------------
+
+  Used to provide pixel fallback for rem function
+
+  Used in conjunction with _function-rem.scss
+  // Usage: u(rem({number}))
+
+------------------------------------------------------ */
+
+$pixel-base : 16; // default browser size
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+
+@function u($values){
+
+  $list: ();
+
+  @each $value in $values {
+
+    $val-unit : unit($value);
+    $val : parseInt($value);
+
+    @if ($px-only) and ($val-unit == 'rem') {
+      $list: append($list, ($val * $pixel-base) + px);
+    }
+
+    @else if($val-unit == 'px') or ($val-unit == 'rem'){
+      $list: append($list, $value);
+    }
+
+    @else {
+      @warn 'There is no unit conversion for #{$val-unit}';
+    }
+
+  }
+
+  @return $list();
+}

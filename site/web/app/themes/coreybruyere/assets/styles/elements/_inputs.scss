@@ -1,0 +1,213 @@
+/**
+
+  @inputs
+---------------------------------------------------------
+  elements/_inputs.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for all different input types
+
+  The next layer of complex form styling can be found in
+  modules/forms.
+
+--------------------------------------------------------- */
+
+
+/* @text inputs
+--------------------------------------------------------
+
+  Base styles for inputs
+
+  Example: Text Input
+  <input type="text" name="schramburger" placeholder="Your Name">
+
+  Inputs can use sizing classes, .input--s .input--l
+
+  Example: Text Small Input
+  <input class="input--s" type="text" name="schramburger" placeholder="Your Name">
+
+  Example: Text Input
+  <input class="input--l" type="text" name="schramburger" placeholder="Your Name">
+
+------------------------------------------------------ */
+
+// Input elements
+input {
+  @include font-family($serif);
+  width: 100%;
+  padding: u(rem(12));
+  padding-top: u(rem(12 - 1));
+  border: 2px solid $color__grey;
+  border-radius: 4px;
+  color: $color__black;
+  text-rendering: optimizeLegibility;
+  -webkit-appearance: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Define the input placeholder color to be reused in the
+// following code
+$input-placeholder: $color__grey--light;
+
+// Placeholders
+// scss-lint:disable MergeableSelector, VendorPrefix
+input {
+  &::-webkit-input-placeholder {
+    @include font-family($serif);
+    color: $input-placeholder;
+  }
+  &:-moz-placeholder {
+    @include font-family($serif);
+    color: $input-placeholder;
+  }
+  &::-moz-placeholder {
+    color: $input-placeholder;
+  }
+  &:-ms-input-placeholder {
+    color: $input-placeholder;
+  }
+}
+
+// Placeholders on focus
+input:focus {
+  &::-webkit-input-placeholder {
+    opacity: .3;
+  }
+  &:-moz-placeholder {
+    opacity: .3;
+  }
+  &::-moz-placeholder {
+    opacity: .3;
+  }
+  &:-ms-input-placeholder {
+    opacity: .3;
+  }
+}
+// scss-lint:enable MergeableSelector, VendorPrefixes
+
+
+
+
+/* @custom radio input
+--------------------------------------------------------
+
+  Base styles for custom radio inputs
+
+  Example: Radio Input
+  <input id="radio-2" type="radio" name="radio" />
+  <label for="radio-2">Check me baby one more time</label>
+
+  Radio inputs must be followed by a label with a for attr attached to it.
+
+------------------------------------------------------ */
+
+// Radio Input elements
+[type="radio"] {
+  position: absolute;
+  width: 0;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+
+  // Sibling label for pseudo styling
+  + label {
+    display: block;
+    margin-bottom: u(rem($base-margin));
+    line-height: 1.5;
+    cursor: pointer;
+    &:before {
+      display: inline-block;
+      width: u(rem(20));
+      height: u(rem(20));
+      margin: 0 u(rem(6)) u(rem(3)) u(rem(3));
+      transition: background-color .15s ease-in-out, color .15s ease-in-out;
+      border: 2px solid $color__black--light;
+      // border-radius: 50%;
+      background: transparent;
+      content: '';
+      vertical-align: middle;
+    }
+  }
+
+  // Checked state
+  &:checked + label:before {
+    border-color: $color__black;
+    background-color: $color__orange;
+    box-shadow: inset 0 0 0 5px $color__white;
+  }
+}
+
+
+
+
+
+/* @custom checkbox input
+--------------------------------------------------------
+
+  Base styles for custom checkbox inputs
+
+  Example: Checkbox Input
+  <input id="checkbox-2" type="checkbox" name="checkbox" />
+  <label for="checkbox-2">Check me baby one more time</label>
+
+  Checkbox inputs must be followed by a label with a for attr attached to it.
+
+------------------------------------------------------ */
+
+// Checkbox Input elements
+[type="checkbox"] {
+  position: absolute;
+  width: 0;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+
+  // Sibling label for pseudo styling
+  + label {
+    display: block;
+    position: relative;
+    margin-bottom: u(rem($base-margin));
+    line-height: 1.5;
+    cursor: pointer;
+    &:before {
+      display: inline-block;
+      width: u(rem(20));
+      height: u(rem(20));
+      margin: 0 u(rem(6)) u(rem(3)) u(rem(3));
+      transition: border-color .15s ease-in-out;
+      border: 2px solid $color__black--light;
+      border-radius: 4px;
+      background: transparent;
+      content: '';
+      vertical-align: middle;
+    }
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: u(rem(8));
+      left: u(rem(7));
+      width: u(rem(12));
+      height: u(rem(6));
+      transform: rotate(-45deg);
+      transition: opacity .15s ease-in-out;
+      border: 3px solid $color__orange;
+      border-top: 0;
+      border-right: 0;
+      content: '';
+      opacity: 0;
+    }
+  }
+
+  // Checked state
+  &:checked + label {
+    &:before {
+      border-color: $color__black;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+

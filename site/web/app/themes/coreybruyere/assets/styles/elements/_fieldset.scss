@@ -1,0 +1,80 @@
+/**
+
+  @fieldset
+---------------------------------------------------------
+  elements/_fieldset.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for all fieldsets
+
+  The next layer of complex form styling can be found in
+  modules/_forms.scss
+
+--------------------------------------------------------- */
+
+
+/* @fieldsets
+--------------------------------------------------------
+
+  Fieldsets group together related fields.
+
+  Example: Fieldset
+  <fieldset>
+    <legend>Personal Information</legend>
+    <article class="form__field">
+      <label for="exampleInput1">Your Name</label>
+      <input id="exampleInput1" type="text" required="required" placeholder="Your name">
+      <span class="field__feedback"></span>
+      <span class="field__hint"></span>
+    </article>
+    <article class="form__field">
+      <label for="exampleInput2">Your Email</label>
+      <input id="exampleInput2" type="email" required="required" placeholder="Your email">
+      <span class="field__feedback"></span>
+      <span class="field__hint">Must be a valid email address</span>
+    </article>
+  </fieldset>
+
+  Fieldsets are also nested inside other fieldsets.
+
+  Example: Nested Fieldsets
+  <fieldset>
+    <legend>Personal Information</legend>
+    <article class="form__field">
+      <label for="exampleInput31">Your Name</label>
+      <input id="exampleInput31" type="text" required="required" placeholder="Your name">
+      <span class="field__feedback"></span>
+      <span class="field__hint"></span>
+    </article>
+    <article class="form__field">
+      <label for="exampleInput32">Your Email</label>
+      <input id="exampleInput32" type="email" required="required" placeholder="Your email">
+      <span class="field__feedback"></span>
+      <span class="field__hint">Must be a valid email address</span>
+    </article>
+    <fieldset>
+      <legend>Address</legend>
+        <article class="form__field">
+          <label for="exampleInput33">Address 1</label>
+          <input id="exampleInput33" type="text" required="required" placeholder="Address 1">
+          <span class="field__feedback"></span>
+          <span class="field__hint">Must be a valid email address</span>
+        </article>
+        <article class="form__field">
+          <label for="exampleInput34">Address 2</label>
+          <input id="exampleInput34" type="text" required="required" placeholder="Address 2">
+          <span class="field__feedback"></span>
+          <span class="field__hint">Must be a valid email address</span>
+        </article>
+    </fieldset>
+  </fieldset>
+
+-------------------------------------------------------- */
+
+fieldset {
+  border: 0;
+}
+
+
+

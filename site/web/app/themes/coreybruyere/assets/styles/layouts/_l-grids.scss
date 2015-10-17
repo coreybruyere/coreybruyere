@@ -1,0 +1,124 @@
+/**
+
+  @grids
+---------------------------------------------------------
+  layouts/_l-grids.scss
+--------------------------------------------------------
+
+  Skyline uses a simple grid system.  It starts with
+  a wrapper div that can have a classname of .l-grid.
+  Inside of that div, you'll nest
+  your grid units.  These are divs with classname of
+  either .l-grid__item.
+
+  To specify the responsive behavior of the grid,
+  add width classes from layouts/_l-widths.scss.
+
+  Example: Grid with responsive width classes
+  <div class="l-grid">
+    <div class="l-grid__item l-sm-one-whole l-md-one-half  l-lg-one-third    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-half  l-lg-one-third    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-third l-lg-one-third    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-whole l-md-one-third l-lg-one-fifth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-third l-lg-three-fifths l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-half  l-lg-one-fifth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-whole l-md-one-half  l-lg-one-sixth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-third l-lg-one-sixth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-third l-lg-one-sixth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-whole l-md-one-third l-lg-one-sixth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-half  l-lg-one-sixth    l-xl-one-twelfth">...</div>
+    <div class="l-grid__item l-sm-one-half  l-md-one-half  l-lg-one-sixth    l-xl-one-twelfth">...</div>
+  </div>
+
+  For a grid wrap containing equally-sized grid units, like
+  a gallery of thumbnails for instance, use the responsive ups
+  classes from layouts/_l-widths.scss. With these classes
+  applied to the .l-grid, you won't need to specify
+  widths on the individual grid units, just on the wrapper.
+
+  Example: Grid with responsive ups classes
+  <div class="l-grid two-up sm-three-up md-four-up lg-six-up">
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+    <div class="l-grid__item">...</div>
+  </div>
+
+  NOTE: see some test styles at the bottom of this partial
+  Remove them if you don't need them.
+
+------------------------------------------------------ */
+
+
+
+
+
+// Grid configuration
+// -----------------------------------------------------
+//
+// Define the point at which grids no longer stack, but float
+// You might use a $breakpoint__* variable from _vars.scss or
+// any other value that works for you.
+$grid__float-at: $mobile;
+//
+// Define the width of the gutters between grid units
+// You might use $base-unit from _vars.scss, or a relative value
+// of $base-unit, like .5 * $base-unit for instance for small gutters.
+$grid__gutter-width: $base-unit;
+//
+// Define the amount of space at the bottom of a grid unit
+// when they are stacking (before they start to float)
+// You might choose $base-unit again.
+$grid__bottom-spacing-when-stacking: $base-unit;
+//
+// Define the amount of space at the bottom of a grid unit
+// when they are floating. It's often a good idea to make
+// this value equal to the gutter width.
+$grid__bottom-spacing-when-floating: $grid__gutter-width;
+
+
+
+// Grid Wrap
+.l-grid {
+  @include clearfix();
+  display: block;
+  // margin-bottom: u(rem(-1*$grid__bottom-spacing-when-stacking));
+  list-style-type: none;
+  @include bp-at-least($grid__float-at) {
+    margin: 0 0 0 u(rem(-1*$grid__gutter-width));
+    // u(rem(-1*$grid__bottom-spacing-when-floating))
+  }
+}
+
+.l-grid--trim {
+  margin: 0;
+  > .l-grid__item {
+    padding: 0;
+  }
+}
+
+
+// Grid
+.l-grid__item {
+  @include clearfix();
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: u(rem(1));
+  // padding-bottom: u(rem($grid__bottom-spacing-when-stacking));
+  @include bp-at-least($grid__float-at) {
+    padding: 0 0 0 u(rem($grid__gutter-width));
+    // u(rem($grid__bottom-spacing-when-floating))
+    float: left;
+  }
+}
+
+

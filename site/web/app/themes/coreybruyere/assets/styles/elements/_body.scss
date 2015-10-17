@@ -1,0 +1,24 @@
+/**
+
+  @body
+--------------------------------------------------------
+  bits/_body.scss
+--------------------------------------------------------
+
+  Body should contain the document's default font and
+  background color for the content, if that background
+  color is different than the html.
+
+------------------------------------------------------ */
+
+
+body {
+  @include font-family($sans, normal);
+  // Check out base/_mixin-gradual-media-queries.scss
+  // for an explaination of this mixin that gradually
+  @include gradual-queries(em(0), 90%, em($small-desktop), 100%, em(600));
+  height: 100%;
+  background: $color__white;
+  color: $color__black--light;
+  line-height: $base-line-height;
+}

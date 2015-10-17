@@ -1,0 +1,68 @@
+/**
+
+  @u-hide
+--------------------------------------------------------
+  utilities/_u-hide.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Helper classes to hide content from all users, visual
+  users but not screen readers, and different media queries.
+
+-----------------------------------------------------  */
+
+// The classic, display: none
+.u-hide {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// Use this if you still need js access to this element
+// it's visually hidden but still in the DOM
+.u-hide-visually {
+  position: absolute;
+  left: -9999%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+// Responsive hiders below max width media query
+// http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+// Max Width @ $small-mobile
+@include bp-until($small-mobile) {
+  .u-hide\<xs {
+    display: none;
+  }
+}
+
+// Max Width @ $mobile
+@include bp-until($mobile) {
+  .u-hide\<sm {
+    display: none;
+  }
+}
+
+// Max Width @ $tablet
+@include bp-until($tablet) {
+  .u-hide\<md {
+    display: none;
+  }
+}
+
+// Max Width @ $small-desktop
+@include bp-until($small-desktop) {
+  .u-hide\<lg {
+    display: none;
+  }
+}
+
+// Max Width @ $desktop
+@include bp-until($desktop) {
+  .u-hide\<xl {
+    display: none;
+  }
+}

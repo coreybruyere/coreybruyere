@@ -1,0 +1,39 @@
+/**
+
+  @l-figure
+--------------------------------------------------------
+  layouts/_l-figure.scss
+--------------------------------------------------------
+
+  Common image layouts. Set an auto width to images,
+  and float or center images in a body of text. Use the
+  base .l-figure class along with a desired modifier
+  class.
+
+-----------------------------------------------------  */
+
+.l-figure {
+  width: auto;
+}
+
+// Image placement helpers
+.l-figure--r {
+  margin-bottom: u(rem($base-margin));
+  margin-left: u(rem($base-margin));
+  float: right;
+}
+
+.l-figure--l {
+  margin-right: u(rem($base-margin));
+  margin-bottom: u(rem($base-margin));
+  float: left;
+}
+
+.l-figure--c {
+  display: block;
+  margin-right: auto;
+  margin-bottom: u(rem($base-margin));
+  margin-left: auto;
+}
+
+

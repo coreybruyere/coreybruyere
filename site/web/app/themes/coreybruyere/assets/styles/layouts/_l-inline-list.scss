@@ -1,0 +1,44 @@
+/**
+
+  @l-inline-list
+--------------------------------------------------------
+  layouts/_l-inline-list.scss
+--------------------------------------------------------
+
+  Remove list styles with the inline list object
+
+  Example: Unordered List
+  <ul class="l-inline-list">
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ul>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ul>
+
+-------------------------------------------------------- */
+
+/**
+
+  @l-inline-list
+--------------------------------------------------------
+
+  Set all child items to inline-block
+
+------------------------------------------------------ */
+
+.l-inline-list {
+  > * {
+    display: inline-block;
+  }
+}
+
+
+

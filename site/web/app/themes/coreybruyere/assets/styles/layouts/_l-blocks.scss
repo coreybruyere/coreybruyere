@@ -1,0 +1,29 @@
+/**
+
+  @l-blocks
+--------------------------------------------------------
+  layouts/_l-blocks.scss
+--------------------------------------------------------
+
+  Blocks contain sections of content.  Blocks can have
+  different visual styling, but usually have the same
+  structure; one spacing unit margin at the bottom,
+  and some have borders, and padding, etc.
+
+-----------------------------------------------------  */
+
+// Blocks add bottom margin
+//
+.l-block {
+  margin-bottom: u(rem($base-unit));
+  // These blocks don't contain visual styling by default, but you can add your own
+}
+
+
+// Block with top and bottom margin
+//
+.l-block--top {
+  margin-top: u(rem($base-unit));
+}
+
+

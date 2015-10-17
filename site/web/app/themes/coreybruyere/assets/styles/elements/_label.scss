@@ -1,0 +1,30 @@
+/**
+
+  @label
+---------------------------------------------------------
+  elements/_label.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for all label elements
+
+  The next layer of complex form styling can be found in
+  modules/_forms.scss
+
+--------------------------------------------------------- */
+
+
+/* @labels
+--------------------------------------------------------
+
+  Base styling for labels
+
+  Example: label
+  <label>Don't label me, I'm a free spirit</labe>
+
+------------------------------------------------------ */
+
+label {
+  font-size: u(rem(16));
+  font-weight: bold;
+}

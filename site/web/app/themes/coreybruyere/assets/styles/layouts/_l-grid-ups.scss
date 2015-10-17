@@ -1,0 +1,174 @@
+/**
+
+  @l-grid-ups
+--------------------------------------------------------
+  layouts/_l-grid-ups.scss
+--------------------------------------------------------
+
+  UPS?
+
+  Yep, ups.  These are global classes that will set
+  their direct children to a specific width.  You will
+  mainly use these in grids, and maybe with tabs or
+  navigations.
+
+  For instance: four-up will set each child to 25%
+
+  Set the ups configuration variables below in this partial
+  to specify how many or how few classes you want available
+  in your project.
+
+  Example: Ups and grids
+  <div class="l-grid l-two-up">
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+  </div><!--/l-grid-->
+  <div class="grid l-three-up@md">
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+  </div><!--/l-grid-->
+
+  Ups work like widths in that they have responsive behavior.  If
+  you prepend an up class with a responsive prefix, like (sm for small
+  or md for medium) the behaviour will only kick in at those
+  viewports.
+
+  For example, if you want your gallery to be two-up at the smallest
+  viewport, four-up at medium, six-up at large, and eight-up on the largest then use
+  this.
+
+  Example: Responsive Ups
+  <div class="l-grid l-two-up l-four-up@md l-six-up@lg l-eight-up@xl">
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+    <div class="l-grid__item"><img src="http://fillmurray.com/500/300"></div>
+  </div><!--/g-->
+
+
+
+-----------------------------------------------------  */
+
+
+
+
+// Ups configuration
+// Define the number of ups you want to use at each
+// breakpoint. The breakpoints below match the values that
+// you defined in base/_vars.scss
+//
+$ups__number-of-ups-at-breakpoint: (
+  n:   12,
+  xs:  12,
+  sm:  12,
+  md:  12,
+  lg:  12,
+  xl:  12,
+  xxl: 12
+);
+
+// Variable widths for comments
+$widths__device-type: (
+  n:  'screen',
+  xs: '$small-mobile',
+  sm: '$mobile',
+  md: '$tablet',
+  lg: '$small-desktop',
+  xl: '$desktop',
+  xxl:'$large-desktop'
+);
+
+
+
+// ----------------------------------------------------
+// Function to make easy-to-read class from number
+// ----------------------------------------------------
+
+// Define english for each integer
+// NOTE: this is also defined in layout/_widths.scss but
+// we're redefining it to avoid making _widths.scss a
+// dependency. In a future release, this will be included
+// in something like base/_definitions.scss.
+//
+$english-by-number: (
+  1:  'one',
+  2:  'two',
+  3:  'three',
+  4:  'four',
+  5:  'five',
+  6:  'six',
+  7:  'seven',
+  8:  'eight',
+  9:  'nine',
+  10: 'ten',
+  11: 'eleven',
+  12: 'twelve'
+);
+
+
+// Mixin to return easy-to-read up class from 2 numbers
+// Accepts a $numerator, $denominator, and optional breakpoint
+//
+@mixin easy-to-read-up($n, $breakpoint:'') {
+  // Define optional prefix
+  //
+  $breakpoint-name: '';
+  @if ($breakpoint != 'n') {
+    @if map-has-key($ups__number-of-ups-at-breakpoint, $breakpoint) {
+      $breakpoint-name: '\@#{unquote($breakpoint)}';
+    }
+  }
+
+  // Define english and delimiter '-' for first part of class
+  //
+  $up-first-part: '.l-#{map-get($english-by-number, $n)}-';
+  $up-first-part-silent: '%l-#{map-get($english-by-number, $n)}-';
+
+
+  // Here's the class
+  #{$up-first-part}up#{$breakpoint-name} > * { width: (100 / $n)*1%; }
+
+  // Here's the silent class to extend
+  #{$up-first-part-silent}up#{$breakpoint-name} > * { width: (100 / $n)*1%; }
+
+}
+
+// Loop through all breakpoints in $ups__number-of-ups-at-breakpoint
+@each $breakpoint, $num-ups in $ups__number-of-ups-at-breakpoint {
+  @if ($num-ups > 0) {
+    @if ($breakpoint != 'n') {
+      /*
+
+        Responsive UP widths at #{map-get($widths__device-type, $breakpoint)}
+
+      ---------------------------------------------------- */
+      @include bp-at-least ( map-get($breakpoints, $breakpoint) ) {
+        @for $i from 1 through $num-ups {
+          @include easy-to-read-up($i, $breakpoint);
+        }
+      }
+    } @else {
+      /*
+
+        UP Widths at default Viewport
+
+      ---------------------------------------------------- */
+      @for $i from 1 through $num-ups {
+        @include easy-to-read-up($i, $breakpoint);
+      }
+    }
+  }
+}

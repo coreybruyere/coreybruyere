@@ -1,0 +1,23 @@
+/**
+
+  @u-bg-color
+--------------------------------------------------------
+  utilities/_u-bg-color.scss
+--------------------------------------------------------
+
+  This is a helper utility partial. Utility classes are prefixed
+  with 'u-'. Utility classes are abstract and reusable.
+
+  Background color helpers
+
+-----------------------------------------------------  */
+
+.u-bg-color {
+  // Palettes
+  &-dark   { background-color: $color__black; }
+  &-medium { background-color: $color__black--light; }
+  &-light  { background-color: $color__grey; }
+  &-xlight { background-color: $color__grey--light; }
+  &-none   { background-color: transparent; }
+  &-white  { background-color: $color__white; }
+}

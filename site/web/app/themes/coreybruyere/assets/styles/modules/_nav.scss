@@ -1,0 +1,65 @@
+/**
+
+  @nav
+--------------------------------------------------------
+  modules/_nav.scss
+--------------------------------------------------------
+
+  Navigations used throughout site
+  Includes site header & footer navigations
+
+------------------------------------------------------ */
+
+// scss-lint:disable PropertyUnits
+
+// Primary Navigation
+.nav {
+  display: inline-block;
+  // -- Min Width @ $mobile
+  @include bp-at-least($mobile) {
+    margin: 0 u(rem(10));
+  }
+}
+
+.nav__item {
+  display: inline-block;
+  position: relative;
+  line-height: inherit;
+  vertical-align: middle;
+  // fancy active state for nav
+  &.active {
+    // border-radius: u(rem(4));
+    // background-color: rgba($color__black--light, .25);
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: u(rem(18));
+      left: 0;
+      width: calc(100% - 15px);
+      margin: auto;
+      border-top: 3px solid $color__orange;
+      content: '';
+    }
+  }
+  // direct <a> el
+  > a {
+    @include font-family($serif, normal);
+    display: block;
+    // margin: 0 u(rem(5));
+    padding: u(rem(23)) u(rem(10));
+    color: $color__white;
+    letter-spacing: u(rem(1));
+    text-decoration: none;
+  }
+}
+
+.nav__sub-item {
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+/**
+
+   @hr
+--------------------------------------------------------
+  bits/_hr.scss
+--------------------------------------------------------
+
+  Horizontal Rule
+
+  Example:
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <hr>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+-------------------------------------------------------- */
+
+
+hr {
+  display: block;
+  height: u(rem(1));
+  margin: u(rem(16)) 0;
+  padding: 0;
+  border: 0;
+  border-top: u(rem(1)) solid $color__grey;
+}
+
+

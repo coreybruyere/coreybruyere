@@ -1,0 +1,88 @@
+/**
+
+  @l-media
+--------------------------------------------------------
+  layouts/_l-media.scss
+--------------------------------------------------------
+
+  The 'media' object is a common pattern in OOCSS.
+  It consists of a wrapper element with a classname of
+  .media and then two child elements, one that contains
+  an image or video that is floated, and the other
+  contains text.
+
+  This used commonly in bios, or comments where you
+  have an avatar to one site, and the comment next to it.
+
+  Source: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+-----------------------------------------------------  */
+
+
+/* @media objects
+---------------------------------------------------------
+
+  Example: Media object, left
+  <article class="l-media">
+    <div class="l-media__left l-one-fifth">
+      <img src="http://fillmurray.com/300/300">
+    </div>
+    <div class="l-media__body">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+  </article>
+
+  Example: Media object, right
+  <article class="l-media">
+    <div class="l-media__right one-fifth">
+      <img src="http://fillmurray.com/300/300">
+    </div>
+    <div class="l-media__body">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+  </article>
+
+---------------------------------------------------------  */
+
+// The main media object
+.l-media {
+  display: block;
+}
+
+
+
+// Child elements, to the left or right
+.l-media__left {
+  margin-right: u(rem($base-unit));
+  float: left;
+}
+.l-media__right {
+  margin-left: u(rem($base-unit));
+  float: right;
+}
+
+// The images inside those left/right elements should be block
+.l-media__left img,
+.l-media__right img {
+  display: block;
+}
+
+
+
+// The body of the media element
+.l-media__body {
+  overflow: hidden;
+}
+.l-media__body,
+.l-media__body > :last-child {
+  margin-bottom: 0;
+}
+
+
+
+// Media Heading
+.l-media__heading {
+  margin-top: 0;
+}
+
+

@@ -1,0 +1,56 @@
+/**
+
+  @select
+---------------------------------------------------------
+  elements/_select.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for all select elements
+
+  The next layer of complex form styling can be found in
+  modules/_forms.scss
+
+--------------------------------------------------------- */
+
+
+/* @select inputs
+--------------------------------------------------------
+
+  Base styling for all selects
+
+  Example: Select Input
+  <select name="schramburger">
+    <option value="value-1">Option 1</option>
+    <option value="value-2">Option 2</option>
+    <option value="value-3">Option 3</option>
+    <option value="value-4">Option 4</option>
+  </select>
+
+  Selects can have added sizing classes, .select--s and .select--l
+
+  Example: Small select
+  <select name="schramburger" class="select--s">
+    <option value="value-1">Option 1</option>
+    <option value="value-2">Option 2</option>
+    <option value="value-3">Option 3</option>
+    <option value="value-4">Option 4</option>
+  </select>
+
+  Example: Large select
+  <select name="schramburger" class="select--l">
+    <option value="value-1">Option 1</option>
+    <option value="value-2">Option 2</option>
+    <option value="value-3">Option 3</option>
+    <option value="value-4">Option 4</option>
+  </select>
+
+------------------------------------------------------ */
+
+select {
+  width: 100%;
+  font-size: u(rem(16));
+  text-rendering: optimizeLegibility;
+}
+
+

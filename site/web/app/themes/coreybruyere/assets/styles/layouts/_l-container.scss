@@ -1,0 +1,48 @@
+/**
+
+  @l-container
+--------------------------------------------------------
+  layouts/_l-container.scss
+--------------------------------------------------------
+
+  The .container class is applied to restrict the
+  max-width of an element, usually a bit of content.
+
+  Often, you will place a .l-container div within another
+  element that has a background color. This gives you
+  a full-bleed background, but the content is contained
+  within the max-width.
+
+  Example: Container within a section
+  <section class="awesome-section-with-background-color">
+    <div class="l-container">
+      <p>Your content goes here... </p>
+    </div>
+  </section>
+
+------------------------------------------------------ */
+
+$container__max-width: 800; // restricts width
+$wide-container__max-width: $container__max-width + 128 + ($base-unit * 2); // regular max width + callout icon size*2 + base-unit*2
+
+.l-container {
+  max-width: u(rem($container__max-width));
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 u(rem($base-unit));
+
+  // Remove padding if child of wide modifier
+  .l-container--wide & {
+    // -- Max Width @ $tablet
+    @include bp-until($tablet) {
+      padding: 0;
+    }
+  }
+
+}
+
+// regular max width + callout icon size*2 + base-unit*2
+.l-container--wide {
+  max-width: u(rem($wide-container__max-width));
+}
+

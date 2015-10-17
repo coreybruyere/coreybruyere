@@ -1,0 +1,44 @@
+/**
+
+  @l-blank-list
+--------------------------------------------------------
+  layouts/_l-blank-list.scss
+--------------------------------------------------------
+
+  Remove list styles with the blank list object
+
+  Example: Unordered List
+  <ul class="l-blank-list">
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>List item here</li>
+    <li>
+      <ul>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+        <li>Nested Item</li>
+      </ul>
+    </li>
+  </ul>
+
+-------------------------------------------------------- */
+
+/**
+
+  @l-blank-list
+--------------------------------------------------------
+
+  Remove default list styles
+
+------------------------------------------------------ */
+
+.l-blank-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+

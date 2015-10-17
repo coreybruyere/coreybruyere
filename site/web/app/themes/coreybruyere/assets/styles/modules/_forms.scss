@@ -1,0 +1,203 @@
+/**
+
+  @forms
+---------------------------------------------------------
+  modules/_forms.scss
+--------------------------------------------------------
+
+  More complex form styles to be layered on top of existing
+  base form elements. Here you'll find form layouts for
+  different circumstances, form groups, form error blocks,
+  etc.
+
+--------------------------------------------------------- */
+
+
+/* @form
+--------------------------------------------------------
+
+  Like the bootstrap convention, apply standard styling
+  on any form with the classname .form
+
+  This allows us to create modifier classnames like
+  .form--inline and .form--horizontal, which will be
+  laid out further below.
+
+------------------------------------------------------ */
+
+.form {
+  display: block;
+}
+
+
+
+
+/* @form-header
+--------------------------------------------------------
+
+  A form header usually consists of a title and some
+  copy.
+
+  Example: Form header
+  <header class="form__header">
+    <h2>Contact Us</h2>
+    <p>Use this form to contact us.  We love talking to
+    our customers.</p>
+  </header>
+
+-------------------------------------------------------- */
+
+.form__header {
+  margin-bottom: u(rem(15));
+  padding-bottom: u(rem(10));
+  border-bottom: u(rem(1)) solid $color__grey;
+}
+
+
+
+
+
+/* @form-field
+--------------------------------------------------------
+
+  A field is an article that contains the input and anything
+  related to the input.
+
+  Example: Field for a text input
+  <article class="form__field">
+    <label for="exampleInput1">Your Name</label>
+    <input id="exampleInput1" type="text" required="required" placeholder="Your name">
+    <span class="form__feedback"></span>
+    <span class="form__hint"></span>
+  </article>
+
+  Example: Field with hint
+  <article class="form__field">
+    <label for="exampleInput2">Your Email</label>
+    <input id="exampleInput2" type="email" required="required" placeholder="Your email">
+    <span class="form__feedback"></span>
+    <span class="form__hint">Must be a valid email address</span>
+  </article>
+
+  Example: Field with Error
+  <article class="field is-error">
+    <label for="exampleInput3">Your Email</label>
+    <input id="exampleInput3" type="email" required="required" placeholder="Your email">
+    <span class="form__feedback">Sorry, that email is in use.</span>
+    <span class="form__hint"></span>
+  </article>
+
+  Example: Field for a select input
+  <article class="form__field">
+    <label for="exampleInput4" >Select your favorite</label>
+    <select class="form__input input--select" id="exampleInput4"  name="favorite-food">
+      <option>Pizza</option>
+      <option>Tacos</option>
+      <option>Burgers</option>
+    </select>
+    <span class="form__feedback"></span>
+    <span class="form__hint"></span>
+  </article>
+
+  Example: Field for a textarea input
+  <article class="form__field">
+    <label>Your Name</label>
+    <textarea>Hello, there</textarea>
+    <span class="form__feedback"></span>
+    <span class="form__hint"></span>
+  </article>
+
+-------------------------------------------------------- */
+
+.form__field {
+  position: relative;
+  margin-bottom: u(rem(15));
+
+  // field error states
+  &.is-error {
+
+  }
+
+}
+
+
+
+
+
+
+
+/* @form-group
+--------------------------------------------------------
+
+  Group containing multiple inputs, helpful for lists
+  of radios or checkboxes.  Shown below in a field...
+
+  Example: Field with input group of radios
+  <article class="form__field">
+    <label>Choose your favorite</label>
+    <div class="form__group">
+      <label class="input-radio" for="favorite-food-1"><input id="favorite-food-1" name="favorite-food" type="radio" value="pizza"> Pizza</label>
+      <label class="input-radio" for="favorite-food-2"><input id="favorite-food-2" name="favorite-food" type="radio" value="tacos"> Tacos</label>
+      <label class="input-radio" for="favorite-food-3"><input id="favorite-food-3" name="favorite-food" type="radio" value="burgers"> Burgers</label>
+    </div>
+    <span class="form__feedback"></span>
+    <span class="form__hint"></span>
+  </article>
+
+  Example: Field with input group of checkboxes
+  <article class="form__field">
+    <label>Select your favorites</label>
+    <div class="form__group">
+      <label class="input-checkbox" for="favorite-food-4"><input id="favorite-food-4" name="favorite-food-alt" type="checkbox" value="pizza"> Pizza</label>
+      <label class="input-checkbox" for="favorite-food-5"><input id="favorite-food-5" name="favorite-food-alt" type="checkbox" value="tacos"> Tacos</label>
+      <label class="input-checkbox" for="favorite-food-6"><input id="favorite-food-6" name="favorite-food-alt" type="checkbox" value="burgers"> Burgers</label>
+    </div>
+    <span class="field__feedback"></span>
+    <span class="field__hint"></span>
+  </article>
+
+  Example: Field with input group list modifier
+  <article class="form__field">
+    <label>Select your favorites</label>
+    <div class="form__group--list">
+      <label class="input-checkbox" for="favorite-food-7"><input id="favorite-food-7" name="favorite-food-alt2" type="checkbox" value="pizza"> Pizza</label>
+      <label class="input-checkbox" for="favorite-food-8"><input id="favorite-food-8" name="favorite-food-alt2" type="checkbox" value="tacos"> Tacos</label>
+      <label class="input-checkbox" for="favorite-food-9"><input id="favorite-food-9" name="favorite-food-alt2" type="checkbox" value="burgers"> Burgers</label>
+    </div>
+    <span class="field__feedback"></span>
+    <span class="field__hint"></span>
+  </article>
+
+------------------------------------------------------ */
+
+.form__group {
+  @extend %clearfix;
+  display: block;
+  > * {
+    display: inline-block;
+    width: auto;
+    margin-right: u(rem(8));
+    float: left;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.form__group--list {
+  display: block;
+  > * {
+    display: block;
+    margin: u(rem(8)) 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+
+
+
+

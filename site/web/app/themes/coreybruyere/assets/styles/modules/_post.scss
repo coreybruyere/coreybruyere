@@ -1,0 +1,29 @@
+/**
+
+  @post
+--------------------------------------------------------
+  modules/_post.scss
+--------------------------------------------------------
+
+  Blog Post styling - .post being the class that wraps around each article item
+
+-----------------------------------------------------  */
+
+.post {
+  margin-bottom: u(rem($base-unit));
+  padding: u(rem($base-unit)) 0 u(rem($base-unit - $base-margin));
+  border-bottom: 1px solid $color__grey--light;
+  // &:last-of-type {
+  //   border-bottom: 0;
+  // }
+}
+
+.post__title {
+  margin-bottom: u(rem($base-unit / 2));
+}
+
+.post__time {
+  display: block;
+  margin-bottom: u(rem($base-unit));
+  font-size: smaller;
+}

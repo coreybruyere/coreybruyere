@@ -1,0 +1,16 @@
+/**
+
+  @site-main
+--------------------------------------------------------
+  modules/_site-main.scss
+--------------------------------------------------------
+
+  The site's main content
+
+------------------------------------------------------ */
+
+.site-main {
+  display: block; // <main> element still needs block declaration
+  background-color: $color__offwhite;
+  overflow: auto;
+}

@@ -1,0 +1,78 @@
+/**
+
+  @tables
+---------------------------------------------------------
+  bits/_tables.scss
+--------------------------------------------------------
+
+  Base styling for tables
+
+--------------------------------------------------------- */
+
+
+/* @table
+--------------------------------------------------------
+  Base table styling
+
+  Example: Table
+  <table>
+    <thead>
+      <tr>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+        <th>Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+    </tbody>
+  </table>
+
+------------------------------------------------------ */
+
+
+table {
+  width: 100%;
+  margin-top: u(rem($base-unit));
+  margin-bottom: u(rem($base-unit));
+  border: 0;
+  border-collapse: collapse;
+}
+th {
+  // Add custom styles below...
+
+}
+th,
+td {
+  // Add custom styles below...
+
+}
+
+
+
+
+

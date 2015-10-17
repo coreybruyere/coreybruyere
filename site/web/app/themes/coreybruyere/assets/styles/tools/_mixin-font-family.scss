@@ -1,0 +1,30 @@
+/**
+
+  @font-family
+-----------------------------------------------------------
+  tools/_mixin-font-family.scss
+-----------------------------------------------------------
+
+  Use this mixin to include a specific font family. Imported
+  fonts can be found it /settings/_fonts.scss and their
+  corresponding variables in /settings/_vars.scss
+
+  Mixin accepts font family name or variable and an optional
+  normal, bolder, or lighter string for the font weight.
+
+  Usage:
+  @include font-family($font-name, $weight);
+
+--------------------------------------------------------- */
+
+@mixin font-family($font-name: $sans, $weight: normal){
+  font-family: $font-name;
+
+  @if $weight == lighter {
+    font-weight: 700;
+  } @else if $weight == bolder {
+    font-weight: 900;
+  } @else {
+    font-weight: $weight;
+  }
+}

@@ -1,0 +1,18 @@
+/**
+
+   @site
+--------------------------------------------------------
+  modules/_site.scss
+--------------------------------------------------------
+
+  We use the naming convention of .site-* for global
+  modules like the header, main, and footer.
+
+  Wrap .site around the body
+
+------------------------------------------------------ */
+
+.site {
+  position: relative;
+  border-top: 6px solid $color__turqoise--trans;
+}

@@ -1,0 +1,322 @@
+/****
+
+  MAIN STYLESHEET for the portfolio of Corey Bruyere
+
+---------------------------------------------------------
+
+  A SMACSS/ITCSS like approach to CSS using the BEM methodology
+
+---------------------------------------------------------
+
+  TABLE OF CONTENTS
+  @toc
+
+  - Settings ........ fonts, vars
+  - Tools ........... public functions and mixins
+  - Elements ........ single base elements
+  - Layouts ......... layout objects like grids, containers, lists
+  - Modules ......... less generic styles
+  - Utilities ....... utility helper classes that trump everything else
+
+---------------------------------------------------------  */
+
+
+
+/***
+
+  @config
+---------------------------------------------------------
+
+  Config for main stylesheet. Declares variable to compile
+  regular browser stylesheet
+
+-----------------------------------------------------  */
+
+$old-ie: false;
+$px-only: false;
+$dev-mode: false;
+
+
+
+/***
+
+  @tools
+---------------------------------------------------------
+
+  Default mixins and functions
+
+-----------------------------------------------------  */
+
+// Functions
+//
+@import 'tools/function-rem';
+
+@import 'tools/function-u';
+
+@import 'tools/function-em';
+
+
+// Mixins
+//
+@import 'tools/mixin-breakpoints';
+
+@import 'tools/mixin-arrows';
+
+@import 'tools/mixin-burger';
+
+@import 'tools/mixin-box-shadow';
+
+@import 'tools/mixin-retina';
+
+@import 'tools/mixin-old-ie';
+
+@import 'tools/mixin-clearfix';
+
+@import 'tools/mixin-font-face-importer';
+
+@import 'tools/mixin-font-line';
+
+@import 'tools/mixin-font-family';
+
+@import 'tools/mixin-gradual-media-queries';
+
+
+// Animate CSS Mixins
+//
+@import 'tools/_mixin-animations/animate';
+
+
+
+/***
+
+  @settings
+---------------------------------------------------------
+
+  Global variables and fonts to use and extend
+
+-----------------------------------------------------  */
+
+// Fonts
+//
+@import 'settings/import-fonts';
+
+
+// Vars
+//
+@import 'settings/var-breakpoints';
+
+@import 'settings/var-spacing';
+
+@import 'settings/var-fonts';
+
+@import 'settings/var-type';
+
+@import 'settings/var-colors';
+
+
+
+/***
+
+  @elements
+---------------------------------------------------------
+
+  Global styling of elements.
+
+---------------------------------------------------------  */
+
+// Page Elements
+//
+@import 'elements/html';
+
+@import 'elements/body';
+
+
+// Text Elements
+//
+@import 'elements/text';
+
+@import 'elements/anchors';
+
+@import 'elements/headings';
+
+@import 'elements/lists';
+
+@import 'elements/quotes';
+
+@import 'elements/code';
+
+
+// Form Elements
+//
+@import 'elements/button';
+
+@import 'elements/inputs';
+
+@import 'elements/fieldset';
+
+@import 'elements/label';
+
+@import 'elements/textarea';
+
+@import 'elements/select';
+
+
+// Misc. Elements
+//
+@import 'elements/hr';
+
+@import 'elements/images';
+
+@import 'elements/tables';
+
+
+
+/***
+
+  @layouts
+---------------------------------------------------------
+
+  A large portion of CSS is structural layout. You will use
+  these objects to create the scaffolding that will support
+  the elements that make up your site.
+
+---------------------------------------------------------  */
+
+@import 'layouts/l-blank-list';
+
+@import 'layouts/l-inline-list';
+
+@import 'layouts/l-blocks';
+
+@import 'layouts/l-container';
+
+@import 'layouts/l-flag';
+
+@import 'layouts/l-figure';
+
+@import 'layouts/l-full-bleed';
+
+@import 'layouts/l-grids';
+
+@import 'layouts/l-grid-ups';
+
+@import 'layouts/l-island';
+
+@import 'layouts/l-media';
+
+@import 'layouts/l-this-or-this';
+
+@import 'layouts/l-widths';
+
+
+
+/***
+
+  @modules
+---------------------------------------------------------
+
+  Reusable objects that are combinations
+  of elements and other modules.
+
+  When you create a new module, make sure the partial is
+  in the modules directory, and you import it below
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+
+// Site Modules
+//
+@import 'modules/site';
+
+@import 'modules/site-header';
+
+@import 'modules/site-document';
+
+@import 'modules/site-main';
+
+@import 'modules/site-footer';
+
+
+// Bit Modules
+//
+@import 'modules/alt-links';
+
+@import 'modules/buttons';
+
+@import 'modules/icons';
+
+@import 'modules/sidebar';
+
+
+// Component Modules
+//
+@import 'modules/accordion';
+
+@import 'modules/alerts';
+
+@import 'modules/branding';
+
+@import 'modules/callouts';
+
+@import 'modules/cat-tag';
+
+@import 'modules/dropdown';
+
+@import 'modules/feature';
+
+@import 'modules/forms';
+
+@import 'modules/heroes';
+
+@import 'modules/modals';
+
+@import 'modules/nav';
+
+@import 'modules/tabs';
+
+@import 'modules/tooltips';
+
+@import 'modules/post';
+
+@import 'modules/section';
+
+@import 'modules/slant';
+
+@import 'modules/thumbnails';
+
+@import 'modules/video-embeds';
+
+
+
+/***
+
+  @utilities
+---------------------------------------------------------
+
+  Helpers and overrides.
+
+---------------------------------------------------------  */
+
+@import 'utilities/u-bg-color';
+
+@import 'utilities/u-circle';
+
+@import 'utilities/u-clearfix';
+
+@import 'utilities/u-float';
+
+@import 'utilities/u-heading';
+
+@import 'utilities/u-hide';
+
+@import 'utilities/u-margin';
+
+@import 'utilities/u-muted';
+
+@import 'utilities/u-shim';
+
+@import 'utilities/u-text-align';
+
+
+

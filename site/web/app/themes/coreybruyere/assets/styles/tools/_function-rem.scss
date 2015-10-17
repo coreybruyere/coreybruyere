@@ -1,0 +1,18 @@
+/**
+
+  @rem
+--------------------------------------------------------
+  tools/_function-rem.scss
+--------------------------------------------------------
+
+	Used to calculate rem value based on pixel value
+	that's passed.
+
+	Used in conjunction with _function-u.scss
+	// Usage: u(rem({number}))
+
+------------------------------------------------------ */
+
+@function rem($target, $context: 16) {
+  @return ($target / $context)+0rem;
+}

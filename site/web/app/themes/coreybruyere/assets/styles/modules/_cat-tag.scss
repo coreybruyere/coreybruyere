@@ -1,0 +1,73 @@
+/**
+
+  @cat-tag
+--------------------------------------------------------
+  modules/_cat-tag.scss
+--------------------------------------------------------
+
+  cat Tag items styling for blog cat categories
+
+  Example: cat-tag
+  <ul>
+    <li class="cat-tag">cat tag item
+    <li class="cat-tag">Another cat tag item
+  </ul>
+------------------------------------------------------ */
+// scss-lint:disable PropertyUnits, PropertySortOrder
+
+.cat-tag {
+  display: inline-block;
+  position: relative;
+  height: u(rem(20));
+  margin: 0 u(rem(2)) 0 u(rem(10));
+  border: 0;
+  border-right: 3px solid $color__grey;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: $color__grey--light;
+  color: $color__black--light;
+  font-size: u(rem(10));
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+  }
+  &:before {
+    top: 0;
+    right: 100%;
+    width: u(rem(20));
+    transition: border-color .15s linear;
+    border-color: transparent;
+    border-width: u(rem(10));
+    border-right-color: $color__grey--light;
+    border-style: solid;
+  }
+  &:after {
+    top: 50%;
+    right: 100%;
+    width: u(rem(3));
+    height: u(rem(3));
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: $color__white;
+  }
+}
+
+// Category tag modifiers
+.cat-tag--random {
+  border-color: $color__success;
+}
+
+.cat-tag--tutorial {
+  border-color: $color__error;
+}
+
+.cat-tag--development {
+  border-color: $color__info;
+}
+
+.cat-tag__link {
+  display: block;
+  padding: 0 u(rem(10));
+  color: inherit;
+}

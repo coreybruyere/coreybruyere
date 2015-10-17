@@ -1,0 +1,28 @@
+/**
+
+  @code
+--------------------------------------------------------
+  bits/_code.scss
+--------------------------------------------------------
+
+  Code elements like <code> and <pre>
+
+  Example: Code in a paragraph
+  <p>This is a cool paragraph about a classname called <code>.franz</code></p>
+
+
+-----------------------------------------------------  */
+
+// Code
+//
+code {
+  padding: u(rem(1)) u(rem(5));
+  background: rgba(193, 199, 208, .3);
+  vertical-align: middle;
+}
+
+// Pre
+pre {
+  margin-top: u(rem($base-unit));
+  margin-bottom: u(rem($base-unit));
+}

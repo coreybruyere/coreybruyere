@@ -1,0 +1,39 @@
+/**
+
+  @button
+---------------------------------------------------------
+  elements/_button.scss
+--------------------------------------------------------
+
+  BASE STYLING ONLY!
+  Base styles for the bare button element
+
+  The next layer of styling can be found in
+  modules/_buttons.scss and modules/_forms.scss
+
+--------------------------------------------------------- */
+
+
+/* @button element
+--------------------------------------------------------
+
+  Styling reset for button element
+
+  Example: Regular button
+  <button>A boring button, add a .btn class to style me</button>
+
+------------------------------------------------------ */
+button {
+  border: 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+
+
+

@@ -1,0 +1,45 @@
+/**
+
+  @font-size-line
+-----------------------------------------------------------
+  tools/_mixin-font-size-line.scss
+-----------------------------------------------------------
+
+  Calculate proper font-size and line height.
+
+  See: https://github.com/inuitcss/tools.mixins/blob/master/_tools.mixins.scss
+
+  Usage:
+  @include font-line($font-name, $weight);
+
+--------------------------------------------------------- */
+
+
+
+$mix-base-font-size: 16;
+$mix-base-line-height: 24;
+
+//https://github.com/inuitcss/tools.mixins/blob/master/_tools.mixins.scss
+//http://csswizardry.com/2012/06/single-direction-margin-declarations/
+
+
+@mixin font-size-line($mix-font-size, $mix-line-height: auto) {
+    font-size: em($mix-font-size);
+
+    @if $mix-line-height == auto {
+        line-height: ceil($mix-font-size / $mix-base-line-height) * ($mix-base-line-height / $mix-font-size);
+    }
+
+    @else {
+
+        @if (type-of($mix-line-height) == number or $mix-line-height == inherit or $mix-line-height == normal) {
+            line-height: $mix-line-height;
+        }
+
+        @elseif ($mix-line-height != none and $mix-line-height != false) {
+            @warn "D’oh! ‘#{$mix-line-height}’ is not a valid value for `line-height`."
+        }
+
+    }
+
+}

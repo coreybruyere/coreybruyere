@@ -1,0 +1,147 @@
+/**
+
+  @heroes
+--------------------------------------------------------
+  modules/_heroes.scss
+--------------------------------------------------------
+
+  Just your everyday, normal hero.  Contains a div that has
+  the media (video or image) in the background, and a div
+  for the main content.
+
+  Example: Hero
+  <div class="hero">
+    <div class="hero__main">
+      <h1 class="hero__leadin">This is the leadin</h1>
+      <h2 class="hero__name">Name Here</h2>
+    <div class="hero__media"><img src="http://fillmurray.com/1000/400"></div>
+  </div>
+------------------------------------------------------ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: u(rem(220));
+  padding: u(rem(90)) 0;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: $color__black--light;
+  overflow: hidden;
+  z-index: 1;
+  background-blend-mode: soft-light;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    padding: u(rem(100)) 0;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .9;
+    z-index: 10;
+  }
+}
+
+// Hero Primary background Color Modifier
+.hero--primary {
+  background-image: linear-gradient(to right, $color__turqoise , $color__black--light);
+  color: $color__white;
+  &:after {
+    background-image: linear-gradient(to bottom right, $color__turqoise, transparent);
+  }
+}
+
+// Hero Secondary background Color Modifier
+.hero--secondary {
+  background-image: linear-gradient(to right, $color__orange , $color__black--light);
+  color: $color__white;
+  &:after {
+    background-image: linear-gradient(to bottom right, $color__orange, transparent);
+  }
+}
+
+// Hero tertiary background Color Modifier
+.hero--tertiary {
+  background-image: linear-gradient(to right, $color__turqoise--trans , $color__black--light);
+  color: $color__black--light;
+  &:after {
+    background-image: linear-gradient(to bottom right, $color__turqoise--trans, transparent);
+  }
+}
+
+
+.hero__media {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .35;
+  // hacky but will fork for now
+  * {
+    width: auto;
+    max-width: none;
+    min-height: u(rem(500));
+    object-fit: contain;
+    object-position: top;
+    // -- Min Width @ $tablet
+    @include bp-at-least($tablet) {
+      width: 100%;
+    }
+  }
+}
+
+.hero__desc {
+  @include font-size-line(20, 1.5);
+  position: relative;
+  margin: 0;
+  // color: $color__white;
+  z-index: 99;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    width: 50%;
+  }
+
+  // nested <a> tags
+  a {
+    color: inherit;
+    z-index: 99;
+    &:after {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 3px solid $color__orange--trans;
+      content: '';
+      z-index: -1;
+    }
+    &:hover,
+    &:focus {
+      opacity: .75;
+    }
+  }
+}
+
+.hero__title {
+  @include font-size-line(24);
+  position: relative;
+  margin-bottom: 0;
+  color: inherit;
+  z-index: 99;
+}
+
+.hero__sub {
+  @include font-size-line(16);
+  margin-bottom: 0;
+  color: inherit;
+}
+
+
+
+

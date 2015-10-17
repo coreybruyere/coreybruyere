@@ -1,0 +1,48 @@
+/**
+
+  @callouts
+--------------------------------------------------------
+  modules/_callouts.scss
+--------------------------------------------------------
+
+  Callouts, are sections of featured content that usually
+  contain an icon, a title, and some text. These are
+  usually in a row, and call attention to highlighted features.
+
+  Example: Callout
+  <div class="page__section">
+    <article class="callout">
+      <img class="callout__media" src="images/fpo-icon.png">
+      <h3 class="callout__title">Feature</h3>
+      <p>This callout is very impressive, and should command your attention</p>
+    </article>
+  </div>
+
+-----------------------------------------------------  */
+
+// dependent on flexbox parent
+.callout {
+  margin-bottom: u(rem($base-unit));
+  // padding-top: u(rem($base-unit));
+  // border-bottom: 1px solid rgba($color__black, .15);
+  // border-radius: 4px;
+  // background-color: $color__white;
+  color: $color__black--light;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    margin: 0;
+  }
+}
+
+.callout__icon {
+  width: u(rem(45));
+  height: u(rem(45));
+  // margin-top: u(rem(5));
+  color: $color__grey--light;
+  fill: currentColor;
+  // -- Min Width @ $tablet
+  @include bp-at-least($tablet) {
+    width: u(rem(64));
+    height: u(rem(64));
+  }
+}

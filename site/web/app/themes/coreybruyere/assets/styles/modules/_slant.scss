@@ -1,0 +1,36 @@
+/**
+
+  @slant
+--------------------------------------------------------
+  modules/_slant.scss
+--------------------------------------------------------
+
+  Slant borders used to border white and gray sections.
+  Dependent on relative parent
+
+-----------------------------------------------------  */
+
+.slant {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+.slant__upper {
+  position: absolute;
+  bottom: u(rem(6));
+  max-height: u(rem(35));
+  vertical-align: bottom;
+  z-index: -1;
+}
+
+.slant__lower {
+  position: absolute;
+  bottom: 0;
+  max-height: u(rem(35));
+  vertical-align: bottom;
+}

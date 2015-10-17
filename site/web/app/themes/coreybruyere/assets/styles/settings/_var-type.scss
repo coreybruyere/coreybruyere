@@ -1,0 +1,41 @@
+/**
+
+  @var-type
+--------------------------------------------------------
+  settings/_var-type.scss
+--------------------------------------------------------
+
+  This is a variable settings partial.
+
+  Base line-height and type settings.
+  All type sizing variables are defined here.
+  Don't change body font size with pixel value.
+  Use /tools/_mixin-gradual-media-queries.scss do gradually
+  change font size with percentages.
+
+  Heading font-sizes and line height are calculated using the
+  mixin found in /tools/_mixin-font-line.scss in the
+  /bits/headings.scss file.
+
+-----------------------------------------------------  */
+
+// Base body type
+$base-line-height: 1.5; // unitless
+
+$base-heading: 24; // used for line height and margin
+
+$h1-font-size: 36;
+
+$h2-font-size: 30;
+
+$h3-font-size: 24;
+
+$h4-font-size: 20;
+
+$h5-font-size: 18;
+
+$h6-font-size: 16;
+
+
+
+
