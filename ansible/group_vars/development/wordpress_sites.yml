@@ -1,8 +1,8 @@
 # Documentation: https://github.com/roots/trellis#wordpress-sites
 wordpress_sites:
-  example.com:
+  corey.dev:
     site_hosts:
-      - example.dev
+      - corey.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:roots/bedrock.git
     site_install: true
@@ -20,8 +20,8 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://example.dev
-      wp_siteurl: http://example.dev/wp
+      wp_home: http://corey.dev
+      wp_siteurl: http://corey.dev/wp
       wp_env: development
       db_name: example_dev
       db_user: example_dbuser

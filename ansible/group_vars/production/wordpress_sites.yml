@@ -1,10 +1,10 @@
 # Documentation: https://github.com/roots/trellis#wordpress-sites
 wordpress_sites:
-  example.com:
+  coreybruyere.com:
     site_hosts:
-      - example.com
+      - coreybruyere.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:roots/bedrock.git
+    repo: git@github.com:coreybruyere/coreybruyere.git
     branch: master
     # subtree_path: site # relative path to your Bedrock/WP directory in your repo (above) if it is not the root (like the roots-example-project structure)
     multisite:
@@ -17,8 +17,8 @@ wordpress_sites:
       duration: 30s
     system_cron: true
     env:
-      wp_home: http://example.com
-      wp_siteurl: http://example.com/wp
+      wp_home: http://coreybruyere.com
+      wp_siteurl: http://coreybruyere.com/wp
       wp_env: production
       db_name: example_prod
       db_user: example_dbuser
