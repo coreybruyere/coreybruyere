@@ -26,7 +26,7 @@ wordpress_sites:
     repo: git@github.com:coreybruyere/coreybruyere.git
     branch: master
     subtree_path: site # relative path to your Bedrock/WP directory in your repo (above) if it is not the root (like the roots-example-project structure)
-    site_install: false
+    site_install: true
     site_title: Corey Bruyere
     multisite:
       enabled: false
