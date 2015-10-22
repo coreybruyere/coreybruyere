@@ -28,6 +28,7 @@ wordpress_sites:
     subtree_path: site # relative path to your Bedrock/WP directory in your repo (above) if it is not the root (like the roots-example-project structure)
     site_install: true
     site_title: Corey Bruyere
+    db_import: /srv/www/corey.dev/current/web
     multisite:
       enabled: false
       subdomains: false
