@@ -40,9 +40,6 @@
         "dist": {
           "type": "zip",
           "url": "https://deliciousbrains.com/dl/wp-migrate-db-pro-latest.zip?licence_key=fee715cd-2ccb-498f-92f3-4758432e04ff&site_url=composer-test.dev"
-        },
-        "require": {
-          "composer/installers": "v1.0.7"
         }
       }
     }
@@ -54,7 +51,7 @@
     "johnpbloch/wordpress": "4.3.1",
     "roots/soil": "3.4.0",
     "deliciousbrains/wp-migrate-db-pro": "*",
-    "wpackagist-plugin/advanced-custom-fields":"4.4.4",
+    "wpackagist-plugin/advanced-custom-fields":"4.4.3",
     "wpackagist-plugin/custom-post-type-ui":"1.1.2",
     "wpackagist-plugin/regenerate-thumbnails":"2.2.4",
     "wpackagist-plugin/wordpress-importer":"0.6.1",
