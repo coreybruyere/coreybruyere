@@ -1,6 +1,6 @@
 /****
 
-  CRITICAL STYLESHEET for the portfolio of Corey Bruyere
+  MAIN STYLESHEET for the portfolio of Corey Bruyere
 
 ---------------------------------------------------------
 
@@ -55,6 +55,7 @@ $dev-mode: false;
 
 @import 'tools/function-em';
 
+
 // Mixins
 //
 @import 'tools/mixin-breakpoints';
@@ -79,6 +80,7 @@ $dev-mode: false;
 
 @import 'tools/mixin-gradual-media-queries';
 
+
 // Animate CSS Mixins
 //
 @import 'tools/_mixin-animations/animate';
@@ -97,6 +99,7 @@ $dev-mode: false;
 // Fonts
 //
 @import 'settings/import-fonts';
+
 
 // Vars
 //
@@ -121,29 +124,50 @@ $dev-mode: false;
 
 ---------------------------------------------------------  */
 
+// Page Elements
+//
 @import 'elements/html';
 
 @import 'elements/body';
 
+
+// Text Elements
+//
+@import 'elements/text';
+
 @import 'elements/anchors';
-
-// @import 'elements/code';
-
-// @import 'elements/forms';
 
 @import 'elements/headings';
 
+@import 'elements/lists';
+
+// @import 'elements/quotes';
+
+// @import 'elements/code';
+
+
+// Form Elements
+//
+@import 'elements/button';
+
+// @import 'elements/inputs';
+
+// @import 'elements/fieldset';
+
+// @import 'elements/label';
+
+// @import 'elements/textarea';
+
+// @import 'elements/select';
+
+
+// Misc. Elements
+//
 // @import 'elements/hr';
 
 // @import 'elements/images';
 
-// @import 'elements/lists';
-
-// @import 'elements/quotes';
-
 // @import 'elements/tables';
-
-// @import 'elements/text';
 
 
 
@@ -168,13 +192,13 @@ $dev-mode: false;
 
 // @import 'layouts/l-flag';
 
+// @import 'layouts/l-figure';
+
 // @import 'layouts/l-full-bleed';
 
 @import 'layouts/l-grids';
 
 @import 'layouts/l-grid-ups';
-
-// @import 'layouts/l-img-pos';
 
 // @import 'layouts/l-island';
 
@@ -182,7 +206,7 @@ $dev-mode: false;
 
 // @import 'layouts/l-this-or-this';
 
-// @import 'layouts/l-widths';
+@import 'layouts/l-widths';
 
 
 
@@ -207,18 +231,20 @@ $dev-mode: false;
 
 @import 'modules/site-header';
 
+// @import 'modules/site-document';
+
 @import 'modules/site-main';
 
-@import 'modules/site-footer';
+// @import 'modules/site-footer';
 
 
 // Bit Modules
 //
 // @import 'modules/alt-links';
 
-// @import 'modules/buttons';
+@import 'modules/buttons';
 
-// @import 'modules/icons';
+@import 'modules/icons';
 
 // @import 'modules/sidebar';
 
@@ -231,7 +257,7 @@ $dev-mode: false;
 
 @import 'modules/branding';
 
-@import 'modules/callouts';
+// @import 'modules/callouts';
 
 // @import 'modules/cat-tag';
 
@@ -253,9 +279,9 @@ $dev-mode: false;
 
 // @import 'modules/post';
 
-// @import 'modules/section';
+@import 'modules/section';
 
-// @import 'modules/slant';
+@import 'modules/slant';
 
 // @import 'modules/thumbnails';
 
@@ -272,25 +298,25 @@ $dev-mode: false;
 
 ---------------------------------------------------------  */
 
-@import 'utilities/u-bg-color';
+// @import 'utilities/u-bg-color';
 
-@import 'utilities/u-circle';
+// @import 'utilities/u-circle';
 
-@import 'utilities/u-clearfix';
+// @import 'utilities/u-clearfix';
 
-@import 'utilities/u-float';
+// @import 'utilities/u-float';
 
-@import 'utilities/u-heading';
+// @import 'utilities/u-heading';
 
-@import 'utilities/u-hide';
+// @import 'utilities/u-hide';
 
-@import 'utilities/u-margin';
+// @import 'utilities/u-margin';
 
-@import 'utilities/u-muted';
+// @import 'utilities/u-muted';
 
-@import 'utilities/u-shim';
+// @import 'utilities/u-shim';
 
-@import 'utilities/u-text-align';
+// @import 'utilities/u-text-align';
 
 
 
