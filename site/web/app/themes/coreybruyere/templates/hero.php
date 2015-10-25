@@ -4,7 +4,6 @@
 <?php $hero_desc     = get_field('hero_description'); ?>
 <?php $hero_sub      = get_field('hero_sub_title'); ?>
 
-
 <div class="hero <?php echo $hero_bg_color; ?>">
   <?php if (get_field('hero_background') && !is_archive()) : ?>
   <div class="hero__media">
@@ -51,12 +50,14 @@
       <div class="hero__sub"><?php echo $hero_sub; ?></div>
       <?php endif; ?>
     </h1>
+    <?php if (!is_archive()): ?>
     <?php
       // Get markdown field and parse
       // $parse_down  = new Parsedown();
       // $hero_parsed = get_field('hero_description');
     ?>
     <div class="hero__desc"><?php echo $hero_desc; ?></div>
+    <?php endif; ?>
   </div><!-- /.l-container -->
 </div><!-- /.hero -->
 

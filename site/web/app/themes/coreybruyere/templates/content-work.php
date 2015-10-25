@@ -61,7 +61,7 @@
                 <title id="go-to-icon"><?php _e('Go To:', 'sage'); ?></title>
                 <use xlink:href="#icon-link"></use>
               </svg>
-              <span><?php echo $feat_site; ?></span>
+              <span><?php echo the_title(); ?></span>
             </a>
           <?php endif; ?>
         </div>
