@@ -56,7 +56,6 @@
           <?php if (have_rows('site_team')): ?>
             <?php get_template_part('templates/feature-team-list'); ?>
           <?php endif; ?>
-          <?php get_template_part('templates/feature-team-list'); ?>
           <?php if (have_rows('personal_role')): ?>
             <?php get_template_part('templates/feature-role'); ?>
           <?php endif; ?>
