@@ -29,7 +29,7 @@
 
                   <li class="u-shim-r-sm">
                     <a class="alt-link" href="<?php echo $field_val; ?>">
-                      <svg class="icon icon--mdx" role="img" aria-labelledby="<?php echo $field_name; ?>-icon">
+                      <svg class="icon icon--md" role="img" aria-labelledby="<?php echo $field_name; ?>-icon">
                         <title id="<?php echo $field_name; ?>-icon"><?php echo $field_name; ?> <?php _e('Icon', 'sage'); ?></title>
                         <use xlink:href="#icon-<?php echo $field_name; ?>"></use>
                       </svg>

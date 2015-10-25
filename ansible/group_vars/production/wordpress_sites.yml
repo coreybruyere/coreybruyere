@@ -1,10 +1,30 @@
 # Documentation: https://github.com/roots/trellis#wordpress-sites
+
+github_ssh_keys:
+  - username: coreybruyere
+    authorized:
+      - "{{ web_user }}"
+
+project_pre_build_commands_local:
+   - path: "{{ project.local_path }}/web/app/themes/coreybruyere"
+     cmd: npm install
+   - path: "{{ project.local_path }}/web/app/themes/coreybruyere"
+     cmd: bower install
+   - path: "{{ project.local_path }}/web/app/themes/coreybruyere"
+     cmd: gulp --production
+
+project_local_files:
+  - name: compiled theme assets
+    src: "{{ project.local_path }}/web/app/themes/coreybruyere/dist"
+    dest: web/app/themes/coreybruyere
+
+
 wordpress_sites:
   coreybruyere.com:
     site_hosts:
       - coreybruyere.com
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:coreybruyere/coreybruyere.git
+    repo: git@gitlab.com:coreybruyere/coreybruyere.git
     branch: master
     # subtree_path: site # relative path to your Bedrock/WP directory in your repo (above) if it is not the root (like the roots-example-project structure)
     multisite:

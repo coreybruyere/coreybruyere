@@ -66,7 +66,11 @@
     </div><!-- /.l-block-top -->
 
     <div class="l-container">
-      <?php
+
+      <article class="post" id="post-placehold">
+        <h3>'Hello World' + more post coming soon...</h3>
+      </article>
+<!--       <?php
         // Set up WP_query
         $wp_query = new WP_Query(array(
           'order'          => 'DESC',
@@ -79,18 +83,18 @@
         <div class="<?php echo (++$count % 2 == 0) ? 's-even' : 's-odd'; ?>">
           <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
         </div>
-      <?php endwhile; ?>
+      <?php endwhile; ?> -->
 
     </div><!-- /.l-container -->
   </div><!-- /.l-container -->
 
-      <?php wp_reset_postdata(); ?>
+  <?php wp_reset_postdata(); ?>
 
 
 
-  <div class="l-block l-block--top u-text-center">
+<!--   <div class="l-block l-block--top u-text-center">
     <a class="btn" href="<?php echo get_page_link(9); ?>"><?php _e('View More Posts', 'sage'); ?></a>
-  </div><!-- /.l-block-ends -->
+  </div> --><!-- /.l-block-ends -->
 
 </section><!-- /.section -->
 

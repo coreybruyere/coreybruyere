@@ -28,30 +28,31 @@
 
   // tab children always are <li>
   > li {
-    display: table-cell; 
+    display: table-cell;
+    padding: u(rem(5)) 0;
     border: 0 solid rgba($color__black, .085);
-    border-width: 0 1px;
-    border-right-color: rgba($color__white, .085);  
+    border-width: 0 1px 1px;
+    border-right-color: rgba($color__white, .085);
     vertical-align: middle;
   }
 }
 
 // <a> inside of tabs
 .tabs__link {
-  display: block;  
+  display: block;
   padding: u(rem(5)) 0;
 }
 
 // icon or image in tabs
 .tabs__media {
-  display: block; 
+  display: block;
   width: auto;
   max-width: u(rem(50));
-  max-height: u(rem(25)); 
+  max-height: u(rem(25));
   margin: auto;
   // -- Min Width @ $tablet
   @include bp-at-least($tablet) {
     max-width: u(rem(80));
-    max-height: u(rem(40));  
+    max-height: u(rem(40));
   }
 }
