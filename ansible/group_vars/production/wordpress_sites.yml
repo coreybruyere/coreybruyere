@@ -18,7 +18,6 @@ project_local_files:
     src: "{{ project.local_path }}/web/app/themes/coreybruyere/dist"
     dest: web/app/themes/coreybruyere
 
-
 wordpress_sites:
   coreybruyere.com:
     site_hosts:
@@ -40,16 +39,16 @@ wordpress_sites:
       wp_home: http://coreybruyere.com
       wp_siteurl: http://coreybruyere.com/wp
       wp_env: production
-      db_name: example_prod
+      db_name: example_dev
       db_user: example_dbuser
       db_password: example_dbpassword
       # Generate your keys here: https://api.wordpress.org/secret-key/1.1/salt/
       # These CANNOT contain the characters "{%" in succession
-      auth_key: "generateme"
-      secure_auth_key: "generateme"
-      logged_in_key: "generateme"
-      nonce_key: "generateme"
-      auth_salt: "generateme"
-      secure_auth_salt: "generateme"
-      logged_in_salt: "generateme"
-      nonce_salt: "generateme"
+      auth_key: ",@5. ZsdT2.Wl3`ujG}F|bP<f6QpQ&+3lk82I{`4?<w5v8lxCyu}SaiouCK=m*x-"
+      secure_auth_key: "M9b9orl4@($fFpQrx j`BgmHsq0P/ jm7J.uj-iwtYYr0dzfK/n`qKCO$8ckFFlL"
+      logged_in_key: "q`^(2Q(BgqO_B2=x~6oH+oQPCfJT+p5p1cokcq!p,PcCL[DGmh*zsjNx1#j;#AL%"
+      nonce_key: " (7Ik#PsyDjz|%x(SIr3.F,ryN*YM:+-:/cw{JAc:+n3/-1)B;QD`s+.(1mRPQNo"
+      auth_salt: "a !z?+BA:_5pQcXRNy3m9[W)[YFQ|?<J$~4-nqPp<tW_T=!y-J-/dv=BfD/mRZ3A"
+      secure_auth_salt: "^*/+A?Kx%MbiPNkFoYuIyAeJ(&Z}<(TYu2IqJBLH9o`,71lGF2TBc*Cu;C-S!|8s"
+      logged_in_salt: "/gZ$m6HXsD=Met$r.) oKB2~Z/W$j=.jr]]n3YNQlptkdfTA9b|^EZR-*FTInz4."
+      nonce_salt: "+RAe(N(jj#3ozCC,<~5rrQ:ZVPD>|.<+[W*>V8MucffTKm{P<Vmf6!x>-8>/psY|"
