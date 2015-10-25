@@ -53,8 +53,13 @@
           <?php echo $feat_desc; ?>
         </div>
         <div class="l-inline-list u-clearfix">
+          <?php if (have_rows('site_team')): ?>
+            <?php get_template_part('templates/feature-team-list'); ?>
+          <?php endif; ?>
           <?php get_template_part('templates/feature-team-list'); ?>
-          <?php get_template_part('templates/feature-role'); ?>
+          <?php if (have_rows('personal_role')): ?>
+            <?php get_template_part('templates/feature-role'); ?>
+          <?php endif; ?>
           <?php if ($feat_site): ?>
             <a class="btn btn--secondary u-float-right" href="<?php echo $feat_site; ?>">
               <svg class="icon icon--sm" role="img" aria-labelledby="go-to-icon">
