@@ -12,7 +12,7 @@
 
       <div class="l-flag__body">
         <div class="site-footer__wrap">
-          <div><small>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?></small></div>
+          <div class="u-shim-l-lg"><small>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?></small></div>
           <div>
             <ul class="l-inline-list l-blank-list">
               <?php
@@ -27,7 +27,7 @@
                     $field_val  = get_field($field_name, 'option');
                   ?>
 
-                  <li class="u-shim-r-sm">
+                  <li class="u-shim-l-lg">
                     <a class="alt-link" href="<?php echo $field_val; ?>">
                       <svg class="icon icon--md" role="img" aria-labelledby="<?php echo $field_name; ?>-icon">
                         <title id="<?php echo $field_name; ?>-icon"><?php echo $field_name; ?> <?php _e('Icon', 'sage'); ?></title>

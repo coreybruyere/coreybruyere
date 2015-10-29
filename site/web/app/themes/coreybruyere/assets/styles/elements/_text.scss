@@ -60,7 +60,8 @@ p {
 b,
 strong {
   // NOTE: use bold font-face if available instead of 'font-weight: bold'
-  font-weight: bold;
+  // font-weight: bold;
+  text-decoration: underline;
 }
 
 
