@@ -46,16 +46,11 @@
   <div class="l-container l-container--wide">
     <h1 class="u-margin-b-none">
       <div class="hero__title"><?php echo is_front_page() ? get_bloginfo() : Titles\title() ?></div>
-      <?php if (is_single() && $hero_sub): ?>
+      <?php if (is_single() && is_front_page() && $hero_sub): ?>
       <div class="hero__sub"><?php echo $hero_sub; ?></div>
       <?php endif; ?>
     </h1>
-    <?php if (is_single() && $hero_desc): ?>
-    <?php
-      // Get markdown field and parse
-      // $parse_down  = new Parsedown();
-      // $hero_parsed = get_field('hero_description');
-    ?>
+    <?php if (is_single() && is_front_page() && $hero_desc): ?>
     <div class="hero__desc"><?php echo $hero_desc; ?></div>
     <?php endif; ?>
   </div><!-- /.l-container -->
