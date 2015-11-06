@@ -32,8 +32,10 @@ wordpress_sites:
     ssl:
       enabled: false
     cache:
-      enabled: false
+      enabled: true
       duration: 30s
+      skip_cache_uri: /wp-admin/|/xmlrpc.php|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml
+      skip_cache_cookie: comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in
     system_cron: true
     env:
       wp_home: http://coreybruyere.com

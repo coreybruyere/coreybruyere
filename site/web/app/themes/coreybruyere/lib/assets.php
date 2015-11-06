@@ -115,7 +115,7 @@ function assets() {
   }
 
   // All other JS
-  wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
+  // wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
   wp_enqueue_script('picturefill', asset_path('scripts/picturefill.js#async'), [], null, true);
   wp_enqueue_script('sage_js', asset_path('scripts/main.js#async'), null, true);
 }
