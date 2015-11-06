@@ -90,7 +90,7 @@ function asset_path($filename) {
 function assets() {
 
   // Critical/Async CSS
-  if (WP_ENV == 'development') {
+  if (WP_ENV == 'production') {
     if (isset($_COOKIE['fullCSS']) && $_COOKIE['fullCSS'] === 'true' ) {
       // Load CSS traditionally if cookie is set
       wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
