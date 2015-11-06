@@ -106,7 +106,7 @@ function assets() {
     }
   // Dev styling
   } else {
-    wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
+    // wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
   }
 
   // Comment script
