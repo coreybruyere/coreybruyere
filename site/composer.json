@@ -59,6 +59,7 @@
     "wpackagist-plugin/the-events-calendar":"3.12.3",
     "wpackagist-plugin/wp-smushit":"2.0.7",
     "wpackagist-plugin/wordpress-importer":"0.6.1",
+    "wpackagist-plugin/wordfence":"6.0.20",
     "wpackagist-plugin/wp-retina-2x":"3.5.4"
   },
   "extra": {

@@ -14,18 +14,18 @@
 //
 .section {
   position: relative;
-  // padding-top: u(rem($base-unit));     
-  padding-bottom: u(rem($base-unit));  
-  // border-top: 1px solid $color__offwhite;  
+  // padding-top: u(rem($base-unit));
+  padding-bottom: u(rem($base-unit));
+  // border-top: 1px solid $color__offwhite;
   border-bottom: 1px solid $color__grey;
   // The top hero always had margin instead
   &:first-of-type {
-    padding: 0; 
+    padding: 0;
     border-top: 0;
     border-bottom: 0;
-  } 
+  }
   &:nth-child(odd) {
-    background-color: $color__white; 
+    background-color: $color__white;
   }
 }
 
