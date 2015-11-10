@@ -102,7 +102,7 @@ function assets() {
       echo '</style>';
 
       // Async CSS, set cookie, and provide noscript fallback
-      include get_stylesheet_directory() . '/critical.script.php';
+      include get_stylesheet_directory() . '/critical-script.php';
     }
   // Dev styling
   } else {
