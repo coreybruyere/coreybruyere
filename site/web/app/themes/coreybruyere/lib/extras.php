@@ -162,11 +162,11 @@ function html_tag_schema() {
   {
     $type = 'SearchResultsPage';
   }
-  // Is of movie post type
-  // elseif(is_singular('movies'))
-  // {
-  //   $type = 'Movie';
-  // }
+  //Is of movie post type
+  elseif(is_singular('work'))
+  {
+    $type = 'CreativeWork';
+  }
   // Is of book post type
   // elseif(is_singular('books'))
   // {

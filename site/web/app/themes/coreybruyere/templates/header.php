@@ -16,6 +16,6 @@
       endif;
       ?>
     </nav>
-    <a href="#" class="btn btn--ghost u-hide<sm"><?php _e('Contact', 'sage'); ?></a>
+    <a href="<?php echo get_page_link(2); ?>" class="btn btn--ghost u-hide<sm"><?php _e('Contact', 'sage'); ?></a>
   </div>
 </header>
