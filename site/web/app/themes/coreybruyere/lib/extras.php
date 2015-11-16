@@ -75,6 +75,16 @@ add_filter('acf/options_page/settings', __NAMESPACE__ . '\\acf_custom_menu_name'
 
 
 /**
+ * Add SVG support to WP admin
+ */
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', __NAMESPACE__ . '\\cc_mime_types');
+
+
+/**
  * Redirect to index page when previewing changes in admin
  */
 function redirect_admin_view_cpt_page() {
