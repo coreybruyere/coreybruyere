@@ -43,6 +43,7 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
  */
 function cc_mime_types($mimes) {
   $mimes['webp'] = 'image/webp';
+  $mimes['svg'] = 'image/svg+xml';
   return $mimes;
 }
 add_filter('upload_mimes', __NAMESPACE__ . '\\cc_mime_types');
@@ -72,16 +73,6 @@ function acf_custom_menu_name( $settings )
   return $settings;
 }
 add_filter('acf/options_page/settings', __NAMESPACE__ . '\\acf_custom_menu_name');
-
-
-/**
- * Add SVG support to WP admin
- */
-function cc_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', __NAMESPACE__ . '\\cc_mime_types');
 
 
 /**
