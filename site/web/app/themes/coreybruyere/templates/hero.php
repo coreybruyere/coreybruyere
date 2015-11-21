@@ -32,24 +32,17 @@
       <source srcset="<?php echo $hero_image['sizes']['hero-1x'] ?> 1x, <?php echo $hero_image['sizes']['hero-2x']; ?> 2x" sizes="100vw">
       <!--[if IE 9]></video><![endif]-->
 
-      <!--[if lt IE 9]>
-      <img src="<?php echo $hero_image['sizes']['hero-2x']; ?>" alt="<?php echo $hero_image['alt']; ?>">
-      <![endif]-->
-
-      <!--[if !lt IE 9]><!-->
-      <img srcset="<?php echo $hero_image['sizes']['hero-1x']; ?> 1x, <?php echo $hero_image['sizes']['hero-2x']; ?> 2x"  alt="<?php echo $hero_image['alt']; ?>"/>
-      <!-- <![endif]-->
+      <img src="<?php echo $hero_image['sizes']['hero-1x']; ?>" srcset="<?php echo $hero_image['sizes']['hero-2x']; ?> 2x"  alt="<?php echo $hero_image['alt']; ?>"/>
     </picture>
   </div><!-- /.hero__media -->
   <?php endif; ?>
 
   <div class="l-container l-container--wide">
-    <h1 class="u-margin-b-none">
-      <div class="hero__title"><?php echo is_front_page() ? get_bloginfo() : Titles\title() ?></div>
+      <h1 class="hero__title"><?php echo is_front_page() ? get_bloginfo() : Titles\title() ?></h1>
       <?php if (is_single() || is_front_page() && $hero_sub): ?>
-      <div class="hero__sub"><?php echo $hero_sub; ?></div>
+      <h2 class="hero__sub"><?php echo $hero_sub; ?></h2>
       <?php endif; ?>
-    </h1>
+
     <?php if (is_single() || is_front_page() && $hero_desc): ?>
     <div class="hero__desc"><?php echo $hero_desc; ?></div>
     <?php endif; ?>

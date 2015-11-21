@@ -14,7 +14,7 @@
   ?>
 </section><!-- /.section -->
 
-<section class="section">
+<section class="section u-shim-t-none">
   <?php
     // Tabs
     get_template_part('templates/tabs');

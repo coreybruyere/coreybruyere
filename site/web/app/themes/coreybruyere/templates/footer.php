@@ -1,6 +1,6 @@
 <footer class="site-footer" role="contentinfo">
   <div class="l-container l-container--wide">
-    <div class="l-flag l-flag--bottom">
+    <div class="l-flag l-flag--bottom l-block">
       <div class="l-flag__image">
         <a class="branding u-shim-b-none" href="<?= esc_url(home_url('/')); ?>">
           <svg class="branding__logo  icon" role="img" aria-labelledby="branding">
@@ -12,7 +12,9 @@
 
       <div class="l-flag__body">
         <div class="site-footer__wrap">
-          <div class="u-shim-l-lg"><small>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?></small></div>
+          <div class="u-shim-l-lg">
+            <small>&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?></small>
+          </div>
           <div>
             <ul class="l-inline-list l-blank-list">
               <?php
@@ -45,5 +47,6 @@
       </div><!-- /.l-flag__body -->
     </div><!-- /.l-flag -->
     <?php dynamic_sidebar('sidebar-footer'); ?>
+    <small>Built with <a href="https://roots.io/">Roots</a> and hosted on <a href="https://www.digitalocean.com/">Digital Ocean</a></small>
   </div><!-- /.l-container -->
 </footer><!-- /.site-footer -->

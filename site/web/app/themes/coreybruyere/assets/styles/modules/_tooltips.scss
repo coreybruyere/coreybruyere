@@ -5,9 +5,6 @@
   modules/_tooltips.scss
 --------------------------------------------------------
 
-  Just your everyday, normal hero.  Contains a div that has
-  the media (video or image) in the background, and a div
-  for the main content.
 
   Example: tooltip
   <ul>
@@ -27,10 +24,10 @@ $placement:        data-placement;
 
 
 // The main tooltip class
-.tooltip,
-[role="tooltip"] {
+.tooltip {
   position: relative;
   outline: none;
+  z-index: 99;
 
   // Hide the tooltip when not active
   &:after,
@@ -54,106 +51,130 @@ $placement:        data-placement;
   }
 
   // Tooltip trigger
-  &[#{$trigger}="hover"]:hover:before,
-  &[#{$trigger}="hover"]:hover:after,
-  &[#{$trigger}="focus"]:focus:before,
-  &[#{$trigger}="focus"]:focus:after {
-    transition: opacity .3s linear 0s;
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
+  &[#{$trigger}="hover"],
+  &[#{$trigger}="focus"] {
+    &:hover:before,
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
+      transition: opacity .3s linear 0s;
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
   }
 
   // Tooltip placement top
-  &[#{$placement}="top"]:after,
-  &[#{$placement}="top"]:before {
-    bottom: 100%;
-  }
+  &[#{$placement}="top"] {
+    &:before,
+    &:after {
+      bottom: 100%;
+    }
 
-  &[#{$placement}="top"]:after {
-    left: 50%;
-    margin: 0 0 u(rem(14));
-    transform: translate(50%);
-    border-radius: u(rem(4));
-  }
+    &:after {
+      left: 50%;
+      margin-bottom: u(rem($base-margin));
+      transform: translateX(-50%);
+      border-radius: u(rem(4));
+    }
 
-  &[#{$placement}="top"]:before {
-    left: 50%;
-    margin: 0 0 u(rem(7));
-    transform: translate(50%);
-    border-top: u(rem(8)) solid $color__black;
-    border-right: u(rem(8)) solid transparent;
-    border-left: u(rem(8)) solid transparent;
-    content: '';
+    &:before {
+      left: 50%;
+      margin: 0 0 u(rem(7));
+      transform: translateX(-50%);
+      border-top: u(rem(8)) solid $color__black;
+      border-right: u(rem(8)) solid transparent;
+      border-left: u(rem(8)) solid transparent;
+      content: '';
+    }
   }
 
   // Tooltip placement right
-  &[#{$placement}="right"]:after,
-  &[#{$placement}="right"]:before {
-    left: 100%;
-  }
+  &[#{$placement}="right"] {
+    &:before,
+    &:after {
+      left: 100%;
+    }
 
-  &[#{$placement}="right"]:after {
-    top: 50%;
-    margin: 0 0 0 u(rem(14));
-    transform: translate(50%);
-    border-radius: u(rem(4));
-  }
+    &:after {
+      top: 50%;
+      margin-left: u(rem($base-margin));
+      transform: translateY(-50%);
+      border-radius: u(rem(4));
+    }
 
-  &[#{$placement}="right"]:before {
-    top: 50%;
-    margin: 0 0 0 u(rem(7));
-    transform: translate(50%);
-    border-top: u(rem(8)) solid transparent;
-    border-right: u(rem(8)) solid $color__black;
-    border-bottom: u(rem(8)) solid transparent;
-    content: '';
+    &:before {
+      top: 50%;
+      margin-left: u(rem($base-margin / 2));
+      transform: translateY(-50%);
+      border-top: u(rem(8)) solid transparent;
+      border-right: u(rem(8)) solid $color__black;
+      border-bottom: u(rem(8)) solid transparent;
+      content: '';
+    }
   }
 
   // Tooltip placement bottom
-  &[#{$placement}="bottom"]:after,
-  &[#{$placement}="bottom"]:before {
-    top: 100%;
-  }
+  &[#{$placement}="bottom"] {
+    &:before,
+    &:after {
+      top: 100%;
+    }
 
-  &[#{$placement}="bottom"]:after {
-    left: 50%;
-    margin: u(rem(15)) 0 0;
-    transform: translate(50%);
-    border-radius: u(rem(4));
-  }
+    &:after {
+      left: 50%;
+      margin-top: u(rem(15));
+      transform: translateX(-50%);
+      border-radius: u(rem(4));
+    }
 
-  &[#{$placement}="bottom"]:before {
-    left: 50%;
-    margin: u(rem(8)) 0 0;
-    transform: translate(50%);
-    border-right: u(rem(8)) solid transparent;
-    border-bottom: u(rem(8)) solid $color__black;
-    border-left: u(rem(8)) solid transparent;
-    content: '';
+    &:before {
+      left: 50%;
+      margin-top: u(rem($base-margin / 2));
+      transform: translateX(-50%);
+      border-right: u(rem(8)) solid transparent;
+      border-bottom: u(rem(8)) solid $color__black;
+      border-left: u(rem(8)) solid transparent;
+      content: '';
+    }
   }
 
   // Tooltip placement left
-  &[#{$placement}="left"]:after,
-  &[#{$placement}="left"]:before {
-    right: 100%;
+  &[#{$placement}="left"] {
+    &:before,
+    &:after {
+      right: 100%;
+    }
+
+    &:after {
+      top: 50%;
+      margin-right: u(rem($base-margin));
+      transform: translateY(-50%);
+      border-radius: u(rem(4));
+    }
+
+    &:before {
+      top: 50%;
+      margin-right: u(rem($base-margin / 2));
+      transform: translateY(-50%);
+      border-top: u(rem(8)) solid transparent;
+      border-bottom: u(rem(8)) solid transparent;
+      border-left: u(rem(8)) solid $color__black;
+      content: '';
+    }
   }
 
-  &[#{$placement}="left"]:after {
-    top: 50%;
-    margin: 0 u(rem(15)) 0 0;
-    transform: translate(50%);
-    border-radius: u(rem(4));
+  // Tooltip JS active class
+  // Remove after 15sec
+  &.is-active {
+    &:hover:before,
+    &:hover:after,
+    &:focus:before,
+    &:focus:after {
+      transition: opacity .3s linear 0s;
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
   }
-
-  &[#{$placement}="left"]:before {
-    top: 50%;
-    margin: 0 u(rem(7)) 0 0;
-    transform: translate(50%);
-    border-top: u(rem(8)) solid transparent;
-    border-bottom: u(rem(8)) solid transparent;
-    border-left: u(rem(8)) solid $color__black;
-    content: '';
-  }
-
 }

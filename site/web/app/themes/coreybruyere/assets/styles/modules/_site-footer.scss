@@ -16,6 +16,7 @@
 }
 
 .site-footer__wrap {
+  line-height: 2;
   // -- Min Width @ $tablet
   @include bp-at-least($tablet) {
     display: flex;

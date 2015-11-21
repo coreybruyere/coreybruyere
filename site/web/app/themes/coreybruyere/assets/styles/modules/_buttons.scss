@@ -85,26 +85,41 @@
   transition: color .25s ease-in-out;
   border-color: $color__white;
   background-color: transparent;
-  overflow: hidden;
-  &:before {
-    display: block;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    padding: 0 100%;
-    transform: skewX(-16deg) translate(-120%, 0);
-    transition: transform .25s ease-in-out;
-    background-color: $color__white;
-    content: '';
-    z-index: -1;
-  }
+  // overflow: hidden;
+  // &:before {
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   height: 100%;
+  //   padding: 0 100%;
+  //   transform: skewX(-16deg) translate(-120%, 0);
+  //   transition: transform .25s ease-in-out;
+  //   background-color: $color__white;
+  //   content: '';
+  //   z-index: -1;
+  // }
   &:hover,
   &:active {
     color: $color__orange;
-    &:before {
-      transform: skewX(-16deg) translate(-20%, 0);
-    }
+    // &:before {
+    //   transform: skewX(-16deg) translate(-20%, 0);
+    // }
   }
+}
+
+
+/* @btn--over
+--------------------------------------------------------
+
+  Overlay class triggered on buttons that
+  animate a screen over current text and displays
+  a new message.
+
+------------------------------------------------------ */
+
+.btn--over {
+  border-color: inherit;
+  color: inherit;
 }
 
 

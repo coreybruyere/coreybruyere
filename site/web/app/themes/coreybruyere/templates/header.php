@@ -16,6 +16,6 @@
       endif;
       ?>
     </nav>
-    <a href="<?php echo get_page_link(2); ?>" class="btn btn--ghost u-hide<sm"><?php _e('Contact', 'sage'); ?></a>
+    <a href="mailto:hello@coreybruyere.com" class="btn btn--ghost tooltip js-graceful-toggle" data-tooltip="Copy email to clipboard" data-placement="bottom" data-trigger="hover"><?php _e('Contact', 'sage'); ?></a>
   </div>
 </header>

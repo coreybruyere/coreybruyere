@@ -14,7 +14,7 @@
 //
 .section {
   position: relative;
-  // padding-top: u(rem($base-unit));
+  padding-top: u(rem($base-unit));
   padding-bottom: u(rem($base-unit));
   // border-top: 1px solid $color__offwhite;
   border-bottom: 1px solid $color__grey;

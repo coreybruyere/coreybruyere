@@ -1,79 +1,176 @@
-// /* ========================================================================
-//  * DOM-based Routing
-//  * Based on http://goo.gl/EUTi53 by Paul Irish
-//  *
-//  * Only fires on body classes that match. If a body class contains a dash,
-//  * replace the dash with an underscore when adding it to the object below.
-//  *
-//  * .noConflict()
-//  * The routing is enclosed within an anonymous function so that you can
-//  * always reference jQuery with $, even when in .noConflict() mode.
-//  * ======================================================================== */
 
-// (function($) {
+  /**
+   * HasClass function
+   */
+  function hasClass( elem, className ) {
+    return elem.className.split( ' ' ).indexOf( className ) > -1;
+  }
 
-//   // Use this variable to set up the common and page specific functions. If you
-//   // rename this variable, you will also need to rename the namespace below.
-//   var Sage = { 
-//     // All pages
-//     'common': {
-//       init: function() {
-//         // JavaScript to be fired on all pages
-//       },
-//       finalize: function() {
-//         // JavaScript to be fired on all pages, after page specific JS is fired
-//       }
-//     },
-//     // Home page
-//     'home': {
-//       init: function() {
-//         // console.log('wtf');      
 
-//         // JavaScript to be fired on the home page
-//       },
-//       finalize: function() {
-//         // JavaScript to be fired on the home page, after the init JS
-//       }
-//     },
-//     // About us page, note the change from about-us to about_us.
-//     'about_us': {
-//       init: function() {
-//         // JavaScript to be fired on the about us page
-//       }
+
+
+  /**
+   * Link that is turned into a button toggle if js is enabled
+   * Falls back to link if not
+   * Button toggles id of element passed in data attr with an is-active class
+   */
+  function copyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+
+    //
+    // *** This styling is an extra step which is likely not required. ***
+    //
+    // Why is it here? To ensure:
+    // 1. the element is able to have focus and selection.
+    // 2. if element was to flash render it has minimal visual impact.
+    // 3. less flakyness with selection and copying which **might** occur if
+    //    the textarea element is not visible.
+    //
+    // The likelihood is the element won't even render, not even a flash,
+    // so some of these are just precautions. However in IE the element
+    // is visible whilst the popup box asking the user for permission for
+    // the web page to copy to the clipboard.
+    //
+
+    // Place in top-left corner of screen regardless of scroll position.
+    textArea.style.position = 'fixed';
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+
+    // Ensure it has a small width and height. Setting to 1px / 1em
+    // doesn't work as this gives a negative w/h on some browsers.
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+
+    // We don't need padding, reducing the size if it does flash render.
+    textArea.style.padding = 0;
+
+    // Clean up any borders.
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+
+    // Avoid flash of white box if rendered for any reason.
+    textArea.style.background = 'transparent';
+
+
+    textArea.value = text;
+
+    document.body.appendChild(textArea);
+
+    textArea.select();
+
+    try {
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copying text command was ' + msg);
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+
+    document.body.removeChild(textArea);
+  }
+
+
+
+
+  /**
+   * Link that is turned into a button toggle if js is enabled
+   * Falls back to link if not
+   * Button toggles id of element passed in data attr with an is-active class
+   */
+  var element = document.querySelectorAll('.js-graceful-toggle');
+  var newElement, oldElement, currentElement, currentAttr, oldAttr;
+
+  for (var i = 0; i < element.length; i++) {
+    currentElement = element[i];
+    newElement = document.createElement('button');
+    oldAttr = currentElement.attributes;
+    newElement.innerHTML = currentElement.innerHTML;
+
+    for (var j = 0; j < currentElement.attributes.length; j++) {
+      currentAttr = currentElement.attributes.item(j);
+      newElement.setAttribute(currentAttr.nodeName, currentAttr.nodeValue);
+      console.log(currentElement);
+    }
+
+    newElement.removeAttribute('href');
+    currentElement.parentNode.replaceChild(newElement, currentElement);
+  }
+
+  document.addEventListener('click', function(e) {
+    if (hasClass(e.target, 'js-graceful-toggle')) {
+      // on click find data target and add is-active class and use data dialogue message
+      copyTextToClipboard('Bob');
+    }
+  }, false);
+
+
+  //// DOnt do hover or focus tooltip
+  ///add tooltip styling on click  intead
+  ///change hover attr to click or something
+  ///separate toggle and copy and tooltip functions
+
+// var copyBobBtn = document.querySelector('.js-copy-bob-btn'),
+//   copyJaneBtn = document.querySelector('.js-copy-jane-btn');
+
+// copyBobBtn.addEventListener('click', function(event) {
+//   copyTextToClipboard('Bob');
+// });
+
+
+// copyJaneBtn.addEventListener('click', function(event) {
+//   copyTextToClipboard('Jane');
+// });
+
+
+
+
+
+
+
+
+//   // Click event handler
+//   function getEl(e)  {
+//     if (e.target.className === 'js-graceful-toggle') {
+//       console.log('hi');
 //     }
-//   };
+//     console.log(e);
+//   }
 
-//   // The routing fires all common scripts, followed by the page specific scripts.
-//   // Add additional events for more control over timing e.g. a finalize event
-//   var UTIL = {
-//     fire: function(func, funcname, args) {
-//       var fire;
-//       var namespace = Sage; 
-//       funcname = (funcname === undefined) ? 'init' : funcname;
-//       fire = func !== '';
-//       fire = fire && namespace[func];
-//       fire = fire && typeof namespace[func][funcname] === 'function';
+// element.parent.addEventListener('click', getEl);
 
-//       if (fire) {
-//         namespace[func][funcname](args);
-//       }
-//     },
-//     loadEvents: function() {
-//       // Fire common init JS
-//       UTIL.fire('common');
 
-//       // Fire page-specific init JS, and then finalize JS
-//       $.each(document.body.className.replace(/-/g, '_').split(/\s+/), function(i, classnm) {
-//         UTIL.fire(classnm);
-//         UTIL.fire(classnm, 'finalize');
-//       });
+// // link el
+// var element = document.querySelectorAll('.js-graceful-toggle');
+// var currentElement, oldAttributes, newAttributes, child;
+// Array.prototype.forEach.call(element, function(el, i){
 
-//       // Fire common finalize JS
-//       UTIL.fire('common', 'finalize');
-//     }
-//   };
+//   // console.log(el);
 
-//   // Load Events
-//   $(document).ready(UTIL.loadEvents);
+//   // button el
+//   var newElement = document.createElement('button');
 
-// })(jQuery); // Fully reference jQuery after this point.
+//   currentElement = el[i];
+
+//   oldAttributes = currentElement.attributes;
+//   newAttributes = newElement.attributes;
+//   child = currentElement.firstChild;
+
+
+
+//   newAttributes.setNamedItem(oldAttributes.cloneNode());
+
+//   newElement.removeAttribute('href');
+
+//   do {
+//     newElement.appendChild(child);
+//   } while ((child = child.nextSibling) !== null);
+
+//   currentElement.parentNode.replaceChild(newElement, currentElement);
+
+//   // console.log(oldAttributes);
+
+
+// });
+

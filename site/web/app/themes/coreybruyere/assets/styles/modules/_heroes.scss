@@ -99,6 +99,7 @@
   @include font-size-line(20, 1.5);
   position: relative;
   margin: 0;
+  padding-top: u(rem($base-unit / 2));
   // color: $color__white;
   z-index: 99;
   // -- Min Width @ $tablet
@@ -129,7 +130,7 @@
 }
 
 .hero__title {
-  @include font-size-line(24);
+  @include font-size-line(52);
   position: relative;
   margin-bottom: 0;
   color: inherit;
@@ -137,9 +138,10 @@
 }
 
 .hero__sub {
-  @include font-size-line(16);
+  @include font-size-line(35);
   margin-bottom: 0;
   color: inherit;
+  line-height: 1;
 }
 
 
