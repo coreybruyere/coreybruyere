@@ -14,52 +14,52 @@
 
 .u-margin {
   &-t {
-    &-none   { margin-top: 0; }
-    // &-xs     { margin-top: u(rem($base-unit / 8)); }
-    &-sm     { margin-top: u(rem($base-unit / 6)); }
-    // &-md     { margin-top: u(rem($base-unit / 4)); }
-    &-lg     { margin-top: u(rem($base-unit / 3)); }
-    // &-xl     { margin-top: u(rem($base-unit / 2)); }
-    &-xxl    { margin-top: u(rem($base-unit / 1)); }
+    &-none   { margin-top: 0 !important; }
+    // &-xs     { margin-top: u(rem($base-unit / 8)) !important; }
+    &-sm     { margin-top: u(rem($base-unit / 6)) !important; }
+    // &-md     { margin-top: u(rem($base-unit / 4)) !important; }
+    &-lg     { margin-top: u(rem($base-unit / 3)) !important; }
+    // &-xl     { margin-top: u(rem($base-unit / 2)) !important; }
+    &-xxl    { margin-top: u(rem($base-unit / 1)) !important; }
   }
 
   &-r {
-    &-none   { margin-right: 0; }
-    // &-xs     { margin-right: u(rem($base-unit / 8)); }
-    &-sm     { margin-right: u(rem($base-unit / 6)); }
-    // &-md     { margin-right: u(rem($base-unit / 4)); }
-    &-lg     { margin-right: u(rem($base-unit / 3)); }
-    // &-xl     { margin-right: u(rem($base-unit / 2)); }
-    &-xxl    { margin-right: u(rem($base-unit / 1)); }
+    &-none   { margin-right: 0 !important; }
+    // &-xs     { margin-right: u(rem($base-unit / 8)) !important; }
+    &-sm     { margin-right: u(rem($base-unit / 6)) !important; }
+    // &-md     { margin-right: u(rem($base-unit / 4)) !important; }
+    &-lg     { margin-right: u(rem($base-unit / 3)) !important; }
+    // &-xl     { margin-right: u(rem($base-unit / 2)) !important; }
+    &-xxl    { margin-right: u(rem($base-unit / 1)) !important; }
   }
 
   &-b {
-    &-none   { margin-bottom: 0; }
-    // &-xs     { margin-bottom: u(rem($base-unit / 8)); }
-    &-sm     { margin-bottom: u(rem($base-unit / 6)); }
-    // &-md     { margin-bottom: u(rem($base-unit / 4)); }
-    &-lg     { margin-bottom: u(rem($base-unit / 3)); }
-    // &-xl     { margin-bottom: u(rem($base-unit / 2)); }
-    &-xxl    { margin-bottom: u(rem($base-unit / 1)); }
+    &-none   { margin-bottom: 0 !important; }
+    // &-xs     { margin-bottom: u(rem($base-unit / 8)) !important; }
+    &-sm     { margin-bottom: u(rem($base-unit / 6)) !important; }
+    // &-md     { margin-bottom: u(rem($base-unit / 4)) !important; }
+    &-lg     { margin-bottom: u(rem($base-unit / 3)) !important; }
+    // &-xl     { margin-bottom: u(rem($base-unit / 2)) !important; }
+    &-xxl    { margin-bottom: u(rem($base-unit / 1)) !important; }
   }
 
   &-l {
-    &-none   { margin-left: 0; }
-    // &-xs     { margin-left: u(rem($base-unit / 8)); }
-    &-sm     { margin-left: u(rem($base-unit / 6)); }
-    // &-md     { margin-left: u(rem($base-unit / 4)); }
-    &-lg     { margin-left: u(rem($base-unit / 3)); }
-    // &-xl     { margin-left: u(rem($base-unit / 2)); }
-    &-xxl    { margin-left: u(rem($base-unit / 1)); }
+    &-none   { margin-left: 0 !important; }
+    // &-xs     { margin-left: u(rem($base-unit / 8)) !important; }
+    &-sm     { margin-left: u(rem($base-unit / 6)) !important; }
+    // &-md     { margin-left: u(rem($base-unit / 4)) !important; }
+    &-lg     { margin-left: u(rem($base-unit / 3)) !important; }
+    // &-xl     { margin-left: u(rem($base-unit / 2)) !important; }
+    &-xxl    { margin-left: u(rem($base-unit / 1)) !important; }
   }
 
   &-all {
-    &-none   { margin: 0; }
-    // &-xs     { margin: u(rem($base-unit / 8)); }
-    &-sm     { margin: u(rem($base-unit / 6)); }
-    // &-md     { margin: u(rem($base-unit / 4)); }
-    &-lg     { margin: u(rem($base-unit / 3)); }
-    // &-xl     { margin: u(rem($base-unit / 2)); }
-    &-xxl    { margin: u(rem($base-unit / 1)); }
+    &-none   { margin: 0 !important; }
+    // &-xs     { margin: u(rem($base-unit / 8)) !important; }
+    &-sm     { margin: u(rem($base-unit / 6)) !important; }
+    // &-md     { margin: u(rem($base-unit / 4)) !important; }
+    &-lg     { margin: u(rem($base-unit / 3)) !important; }
+    // &-xl     { margin: u(rem($base-unit / 2)) !important; }
+    &-xxl    { margin: u(rem($base-unit / 1)) !important; }
   }
 }

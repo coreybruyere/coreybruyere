@@ -15,51 +15,51 @@
 .u-shim {
   &-t {
     &-none    { padding-top: 0 !important;}
-    // &-xs      { padding-top: u(rem($base-unit / 8)); }
-    &-sm      { padding-top: u(rem($base-unit / 6)); }
-    // &-md      { padding-top: u(rem($base-unit / 4)); }
-    &-lg      { padding-top: u(rem($base-unit / 3)); }
-    // &-xl      { padding-top: u(rem($base-unit / 2)); }
-    &-xxl     { padding-top: u(rem($base-unit / 1)); }
+    // &-xs      { padding-top: u(rem($base-unit / 8)) !important; }
+    &-sm      { padding-top: u(rem($base-unit / 6)) !important; }
+    // &-md      { padding-top: u(rem($base-unit / 4)) !important; }
+    &-lg      { padding-top: u(rem($base-unit / 3)) !important; }
+    // &-xl      { padding-top: u(rem($base-unit / 2)) !important; }
+    &-xxl     { padding-top: u(rem($base-unit / 1)) !important; }
   }
 
   &-r {
     &-none    { padding-right: 0 !important;}
-    // &-xs      { padding-right: u(rem($base-unit / 8)); }
-    &-sm      { padding-right: u(rem($base-unit / 6)); }
-    // &-md      { padding-right: u(rem($base-unit / 4)); }
-    &-lg      { padding-right: u(rem($base-unit / 3)); }
-    // &-xl      { padding-right: u(rem($base-unit / 2)); }
-    &-xxl     { padding-right: u(rem($base-unit / 1)); }
+    // &-xs      { padding-right: u(rem($base-unit / 8)) !important; }
+    &-sm      { padding-right: u(rem($base-unit / 6)) !important; }
+    // &-md      { padding-right: u(rem($base-unit / 4)) !important; }
+    &-lg      { padding-right: u(rem($base-unit / 3)) !important; }
+    // &-xl      { padding-right: u(rem($base-unit / 2)) !important; }
+    &-xxl     { padding-right: u(rem($base-unit / 1)) !important; }
   }
 
   &-b {
     &-none    { padding-bottom: 0 !important;}
-    // &-xs      { padding-bottom: u(rem($base-unit / 8)); }
-    &-sm      { padding-bottom: u(rem($base-unit / 6)); }
-    // &-md      { padding-bottom: u(rem($base-unit / 4)); }
-    &-lg      { padding-bottom: u(rem($base-unit / 3)); }
-    // &-xl      { padding-bottom: u(rem($base-unit / 2)); }
-    &-xxl     { padding-bottom: u(rem($base-unit / 1)); }
+    // &-xs      { padding-bottom: u(rem($base-unit / 8)) !important; }
+    &-sm      { padding-bottom: u(rem($base-unit / 6)) !important; }
+    // &-md      { padding-bottom: u(rem($base-unit / 4)) !important; }
+    &-lg      { padding-bottom: u(rem($base-unit / 3)) !important; }
+    // &-xl      { padding-bottom: u(rem($base-unit / 2)) !important; }
+    &-xxl     { padding-bottom: u(rem($base-unit / 1)) !important; }
   }
 
   &-l {
     &-none    { padding-left: 0 !important;}
-    // &-xs      { padding-left: u(rem($base-unit / 8)); }
-    &-sm      { padding-left: u(rem($base-unit / 6)); }
-    // &-md      { padding-left: u(rem($base-unit / 4)); }
-    &-lg      { padding-left: u(rem($base-unit / 3)); }
-    // &-xl      { padding-left: u(rem($base-unit / 2)); }
-    &-xxl     { padding-left: u(rem($base-unit / 1)); }
+    // &-xs      { padding-left: u(rem($base-unit / 8)) !important; }
+    &-sm      { padding-left: u(rem($base-unit / 6)) !important; }
+    // &-md      { padding-left: u(rem($base-unit / 4)) !important; }
+    &-lg      { padding-left: u(rem($base-unit / 3)) !important; }
+    // &-xl      { padding-left: u(rem($base-unit / 2)) !important; }
+    &-xxl     { padding-left: u(rem($base-unit / 1)) !important; }
   }
 
   &-all {
     &-none    { padding: 0 !important;}
-    // &-xs      { padding: u(rem($base-unit / 8)); }
-    &-sm      { padding: u(rem($base-unit / 6)); }
-    // &-md      { padding: u(rem($base-unit / 4)); }
-    &-lg      { padding: u(rem($base-unit / 3)); }
-    // &-xl      { padding: u(rem($base-unit / 2)); }
-    &-xxl     { padding: u(rem($base-unit / 1)); }
+    // &-xs      { padding: u(rem($base-unit / 8)) !important; }
+    &-sm      { padding: u(rem($base-unit / 6)) !important; }
+    // &-md      { padding: u(rem($base-unit / 4)) !important; }
+    &-lg      { padding: u(rem($base-unit / 3)) !important; }
+    // &-xl      { padding: u(rem($base-unit / 2)) !important; }
+    &-xxl     { padding: u(rem($base-unit / 1)) !important; }
   }
 }
