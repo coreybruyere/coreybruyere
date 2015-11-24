@@ -77,7 +77,9 @@
   /**
    * Link that is turned into a button toggle if js is enabled
    * Falls back to link if not
-   * Button toggles id of element passed in data attr with an is-active class
+   * Button adds is-active class to id of element passed in data-toggle attr
+   *
+   * @to-do: make close click event and tie it to graceful toggle function
    */
   var element = document.querySelectorAll('.js-graceful-toggle');
   var newElement, oldElement, currentElement, currentAttr, oldAttr;
@@ -91,7 +93,7 @@
     for (var j = 0; j < currentElement.attributes.length; j++) {
       currentAttr = currentElement.attributes.item(j);
       newElement.setAttribute(currentAttr.nodeName, currentAttr.nodeValue);
-      console.log(currentElement);
+      // console.log(currentElement);
     }
 
     newElement.removeAttribute('href');
@@ -100,8 +102,32 @@
 
   document.addEventListener('click', function(e) {
     if (hasClass(e.target, 'js-graceful-toggle')) {
-      // on click find data target and add is-active class and use data dialogue message
-      copyTextToClipboard('Bob');
+      var gracefulTarget = document.getElementById(e.target.dataset.toggle);
+      gracefulTarget.classList.toggle('is-active');
+    }
+  }, false);
+
+
+
+
+  /**
+   * Click event binding tooltip and copy functionality together
+   * On click checks if tooltip has click trigger
+   * If so add is-toggled class to tooltip for set time
+   *
+   * @to-do: build invisible pop up span for accessibility http://heydonworks.com/practical_aria_examples/#button-controlled-input
+   */
+  document.addEventListener('click', function(e) {
+    if (hasClass(e.target, 'js-tooltip')) {
+      var tooltipClickCopy = e.target.dataset.copy;
+
+      e.target.classList.toggle('is-toggled');
+      // if copy data is available, do that too
+      copyTextToClipboard(tooltipClickCopy);
+
+      setTimeout(function(){
+        e.target.classList.remove('is-toggled');
+      }, 5000);
     }
   }, false);
 

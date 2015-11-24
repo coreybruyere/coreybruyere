@@ -21,7 +21,7 @@
   ?>
 
   <div class="l-block">
-    <div class="l-grid l-grid--trim l-two-up@md u-bg-color-light">
+    <!-- <div class="l-grid l-grid--trim l-two-up@md u-bg-color-light"> -->
 
       <?php
         // Set up custom post WP_query
@@ -31,15 +31,15 @@
         ));
       ?>
       <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-        <div class="l-grid__item">
+        <!-- <div class="l-grid__item"> -->
           <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-        </div>
+        <!-- </div> -->
       <?php endwhile; ?>
 
       <?php wp_reset_postdata(); ?>
 
 
-    </div><!-- /.l-grid -->
+    <!-- </div> --><!-- /.l-grid -->
   </div><!-- /.l-block -->
 
   <div class="l-block l-block--top u-text-center">

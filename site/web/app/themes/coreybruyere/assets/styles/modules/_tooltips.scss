@@ -33,7 +33,7 @@ $placement:        data-placement;
   &:after,
   &:before {
     position: absolute;
-    transition: opacity .3s linear 0s;
+    transition: opacity .2s linear 0s;
     outline: none;
     font-size: u(rem(12));
     text-decoration: none;
@@ -44,6 +44,7 @@ $placement:        data-placement;
   // The actual tooltip styles
   &:after {
     padding: u(rem(6));
+    transition: opacity .2s linear 0s;
     background-color: $color__black;
     color: $color__white;
     white-space: nowrap;
@@ -65,7 +66,7 @@ $placement:        data-placement;
   }
 
   // Tooltip placement top
-  &[#{$placement}="top"] {
+  &[#{$placement}^="top"] {
     &:before,
     &:after {
       bottom: 100%;
@@ -90,7 +91,7 @@ $placement:        data-placement;
   }
 
   // Tooltip placement right
-  &[#{$placement}="right"] {
+  &[#{$placement}^="right"] {
     &:before,
     &:after {
       left: 100%;
@@ -105,7 +106,7 @@ $placement:        data-placement;
 
     &:before {
       top: 50%;
-      margin-left: u(rem($base-margin / 2));
+      margin-left: u(rem(8));
       transform: translateY(-50%);
       border-top: u(rem(8)) solid transparent;
       border-right: u(rem(8)) solid $color__black;
@@ -115,7 +116,7 @@ $placement:        data-placement;
   }
 
   // Tooltip placement bottom
-  &[#{$placement}="bottom"] {
+  &[#{$placement}^="bottom"] {
     &:before,
     &:after {
       top: 100%;
@@ -123,14 +124,14 @@ $placement:        data-placement;
 
     &:after {
       left: 50%;
-      margin-top: u(rem(15));
+      margin-top: u(rem($base-margin));
       transform: translateX(-50%);
       border-radius: u(rem(4));
     }
 
     &:before {
       left: 50%;
-      margin-top: u(rem($base-margin / 2));
+      margin-top: u(rem(7));
       transform: translateX(-50%);
       border-right: u(rem(8)) solid transparent;
       border-bottom: u(rem(8)) solid $color__black;
@@ -139,39 +140,38 @@ $placement:        data-placement;
     }
   }
 
-  // Tooltip placement left
-  &[#{$placement}="left"] {
-    &:before,
-    &:after {
-      right: 100%;
-    }
-
-    &:after {
-      top: 50%;
-      margin-right: u(rem($base-margin));
-      transform: translateY(-50%);
-      border-radius: u(rem(4));
-    }
-
-    &:before {
-      top: 50%;
-      margin-right: u(rem($base-margin / 2));
-      transform: translateY(-50%);
-      border-top: u(rem(8)) solid transparent;
-      border-bottom: u(rem(8)) solid transparent;
-      border-left: u(rem(8)) solid $color__black;
-      content: '';
+  // Tooltip placement on smaller displays
+  // bottom-left can be added onto any existing placement
+  &[#{$placement}*="bottom-left"] {
+    @include bp-until($desktop) {
+      &:after {
+        right: auto;
+        left: 0;
+        margin-right: 0;
+        transform: translateX(0);
+      }
     }
   }
 
-  // Tooltip JS active class
+  // Tooltip placement on smaller displays
+  // bottom-right can be added onto any existing placement
+  &[#{$placement}*="bottom-right"] {
+    @include bp-until($desktop) {
+      &:after {
+        right: 0;
+        left: auto;
+        margin-right: 0;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  // Tooltip toggled state
   // Remove after 15sec
-  &.is-active {
-    &:hover:before,
-    &:hover:after,
-    &:focus:before,
-    &:focus:after {
-      transition: opacity .3s linear 0s;
+  &.is-toggled {
+    &:before,
+    &:after {
+      // transition: opacity .3s linear 0s;
       opacity: 1;
       visibility: visible;
       z-index: 2;

@@ -16,6 +16,6 @@
       endif;
       ?>
     </nav>
-    <a href="mailto:hello@coreybruyere.com" class="btn btn--ghost tooltip js-graceful-toggle" data-tooltip="Copy email to clipboard" data-placement="bottom" data-trigger="hover"><?php _e('Contact', 'sage'); ?></a>
+    <a href="mailto:hello@coreybruyere.com" class="btn btn--ghost tooltip js-graceful-toggle js-tooltip" id="js-graceful-btn" data-tooltip="Email was copied to clipboard" data-placement="bottom bottom-right" data-trigger="click" data-copy="hello@coreybruyere.com" data-toggle="js-graceful-btn"><?php _e('Contact', 'sage'); ?></a>
   </div>
 </header>

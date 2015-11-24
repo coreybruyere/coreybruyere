@@ -10,7 +10,7 @@
 <?php $feat_arch_link = get_post_type_archive_link('work') . '#' . sanitize_title_with_dashes($feat_title); ?>
 
 <article class="feature<?php echo is_front_page() ?  ' u-margin-all-none' : ' post u-bg-color-none'; ?>" id="<?php echo sanitize_title_with_dashes($feat_title); ?>">
-  <div class="feature__item">
+  <div class="l-container">
     <div class="feature__text<?php echo is_front_page() ?  ' feature__text--positioned' : ''; ?>">
       <?php if (!is_front_page()): ?>
         <div class="u-h5 u-muted u-margin-b-none"><?php echo $feat_year; ?></div>
