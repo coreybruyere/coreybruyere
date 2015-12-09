@@ -1,0 +1,123 @@
+/**
+
+  @displays
+--------------------------------------------------------
+  modules/_displays.scss
+--------------------------------------------------------
+
+  Styling for fake displays to hold images
+
+-----------------------------------------------------  */
+
+// scss-lint:disable PropertyUnits
+
+.display {
+  display: table;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.display__item {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.display__item--sm {
+  display: none;
+  // -- Min Width @ $mobile
+  @include bp-at-least($mobile) {
+    display: table-cell;
+    width: 13%;
+  }
+}
+
+.display__item--md {
+  display: none;
+  // -- Min Width @ $mobile
+  @include bp-at-least($mobile) {
+    display: table-cell;
+    width: 23%;
+  }
+}
+
+.display__item--lg {
+  width: 100%;
+  // -- Min Width @ $mobile
+  @include bp-at-least($mobile) {
+    width: 64%;
+  }
+}
+
+.display__view {
+  position: relative;
+  max-height: u(rem(300));
+  box-shadow: 0 0 em(9) em(1) rgba($color__grey, .35);
+
+  > img {
+    border: u(rem(1)) solid $color__grey--light;
+    border-bottom: 0;
+  }
+
+  // Modify display__view based on sm parent modifier
+  .display__item--sm & {
+    padding: em(24) em(10) 0;
+    border-radius: em(10) em(10) 0 0;
+    background-color: $color__white;
+    font-size: 85%;
+    &:before {
+      display: block;
+      position: absolute;
+      top: u(rem(10));
+      left: 50%;
+      width: em(12);
+      height: em(2);
+      transform: translateX(-50%);
+      border-radius: em(2);
+      background-color: $color__grey--light;
+      content: '';
+    }
+  }
+
+  // Modify display__view based on md parent modifier
+  .display__item--md & {
+    padding: em(24) em(24) 0;
+    border-radius: em(10) em(10) 0 0;
+    background-color: $color__white;
+    font-size: 85%;
+    &:before {
+      display: block;
+      position: absolute;
+      top: u(rem(10));
+      left: 50%;
+      width: em(4);
+      height: em(4);
+      transform: translateX(-50%);
+      border-radius: em(2);
+      background-color: $color__grey--light;
+      content: '';
+    }
+  }
+
+  // Modify display__view based on lg parent modifier
+  .display__item--lg & {
+    padding: em(22) 0 0;
+    border-radius: u(rem(3));
+    background-color: $color__white;
+    &:before {
+      display: block;
+      position: absolute;
+      top: em(6);
+      left: em(8);
+      width: em(10);
+      height: em(10);
+      border-radius: em(5);
+      background-color: $color__grey--light;
+      box-shadow: 0 0 0 0 $color__grey--light, em(15) 0 0 0 $color__grey--light, em(30) 0 0 0 $color__grey--light;
+      content: '';
+    }
+  }
+}
+
+.display__view--pull {
+  margin-left: u(rem(-25));
+}

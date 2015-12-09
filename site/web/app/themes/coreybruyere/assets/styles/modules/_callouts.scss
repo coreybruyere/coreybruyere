@@ -28,10 +28,6 @@
   // border-radius: 4px;
   // background-color: $color__white;
   color: $color__black--light;
-  // -- Min Width @ $tablet
-  @include bp-at-least($tablet) {
-    margin: 0;
-  }
 }
 
 .callout__icon {

@@ -202,6 +202,8 @@ $dev-mode: false;
 
 @import 'layouts/l-island';
 
+@import 'layouts/l-intrinsic';
+
 @import 'layouts/l-media';
 
 @import 'layouts/l-this-or-this';
@@ -259,7 +261,11 @@ $dev-mode: false;
 
 @import 'modules/callouts';
 
+@import 'modules/card';
+
 @import 'modules/cat-tag';
+
+@import 'modules/displays';
 
 @import 'modules/dropdown';
 

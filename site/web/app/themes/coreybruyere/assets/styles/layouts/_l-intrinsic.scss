@@ -1,0 +1,42 @@
+/**
+
+  @l-intrinsic
+---------------------------------------------------------
+  layouts/_l-intrinsic.scss
+--------------------------------------------------------
+
+  Intrisic ratio layout object
+
+------------------------------------------------------ */
+
+// picture or figure element
+.l-intrinsic {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 0;
+  padding-top: 100%;
+  background-color: $color__grey;
+}
+
+.l-intrinsic--square {
+  padding-top: 100%;
+}
+
+.l-intrinsic--4x3 {
+  padding-top: 75%;
+}
+
+.l-intrinsic--16x9 {
+  padding-top: 56.25%;
+}
+
+// img item
+.l-intrinsic__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -11,6 +11,7 @@
 
 .site-footer {
   padding: u(rem($base-unit / 2)) 0 u(rem($base-unit));
+  outline: u(rem(6)) solid $color__turqoise--trans;
   background-color: $color__turqoise;
   color: $color__white;
 }

@@ -3,29 +3,27 @@
 
   <div class="l-container l-container--wide">
 
-    <div class="l-block l-block--top">
-      <div class="l-grid l-two-up@md">
-      <?php while( have_rows('promo_content') ): the_row(); ?>
-      <?php
-        $promo_title = get_sub_field('promo_title');
-        $promo_desc  = get_sub_field('promo_description');
-        $promo_icon  = get_sub_field('promo_icon');
-      ?>
-        <div class="l-grid__item">
-          <article class="l-media callout">
-            <svg class="l-media__left callout__icon" role="img" aria-labelledby="<?php echo $promo_title; ?>-icon">
-              <title id="<?php echo $promo_title; ?>-icon"><?php echo $promo_title; ?> <?php _e('Icon', 'sage'); ?></title>
-              <use xlink:href="#icon-<?php echo $promo_icon; ?>"></use>
-            </svg>
-            <div class="l-media__body">
-              <h2><?php echo $promo_title; ?></h2>
-              <?php echo $promo_desc; ?>
-            </div>
-          </article>
-        </div>
-      <?php endwhile; ?>
-      </div><!-- /.l-grid -->
-    </div><!-- /.l-block-top -->
+    <div class="l-grid l-two-up@md">
+    <?php while( have_rows('promo_content') ): the_row(); ?>
+    <?php
+      $promo_title = get_sub_field('promo_title');
+      $promo_desc  = get_sub_field('promo_description');
+      $promo_icon  = get_sub_field('promo_icon');
+    ?>
+      <div class="l-grid__item">
+        <article class="l-media callout">
+          <svg class="l-media__left callout__icon" role="img" aria-labelledby="<?php echo $promo_title; ?>-icon">
+            <title id="<?php echo $promo_title; ?>-icon"><?php echo $promo_title; ?> <?php _e('Icon', 'sage'); ?></title>
+            <use xlink:href="#icon-<?php echo $promo_icon; ?>"></use>
+          </svg>
+          <div class="l-media__body">
+            <h3 class="u-h2"><?php echo $promo_title; ?></h3>
+            <?php echo $promo_desc; ?>
+          </div>
+        </article>
+      </div>
+    <?php endwhile; ?>
+    </div><!-- /.l-grid -->
 
     <?php if( have_rows('promo_buttons') ): ?>
       <div class="l-block l-block--top">

@@ -21,25 +21,20 @@
   ?>
 
   <div class="l-block">
-    <!-- <div class="l-grid l-grid--trim l-two-up@md u-bg-color-light"> -->
 
-      <?php
-        // Set up custom post WP_query
-        $custom_query = new WP_Query(array(
-          'post_type'      => 'work',
-          'posts_per_page' => 4
-        ));
-      ?>
-      <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
-        <!-- <div class="l-grid__item"> -->
-          <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-        <!-- </div> -->
-      <?php endwhile; ?>
+    <?php
+      // Set up custom post WP_query
+      $custom_query = new WP_Query(array(
+        'post_type'      => 'work',
+        'posts_per_page' => 4
+      ));
+    ?>
+    <?php while ($custom_query->have_posts()) : $custom_query->the_post(); ?>
+      <?php get_template_part('templates/content-front', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+    <?php endwhile; ?>
 
-      <?php wp_reset_postdata(); ?>
+    <?php wp_reset_postdata(); ?>
 
-
-    <!-- </div> --><!-- /.l-grid -->
   </div><!-- /.l-block -->
 
   <div class="l-block l-block--top u-text-center">
@@ -49,26 +44,24 @@
 
 <section class="section">
   <div class="l-container l-container--wide">
-    <div class="l-block l-block--top">
-      <div class="l-media callout">
-        <svg class="l-media__left callout__icon icon" role="img" aria-labelledby="pencil-icon">
-          <title id="pencil-icon"><?php _e('Pencil', 'sage'); ?></title>
-          <use xlink:href="#icon-pencil2"></use>
-        </svg>
-        <div class="l-media__body">
-          <h2 class="u-margin-all-none"><?php _e('Latest Writing', 'sage'); ?></h2>
-          <?php
-            // Category Tags
-            get_template_part('templates/cat-tag', get_post_type() != 'post' ? get_post_type() : get_post_format());
-          ?>
-        </div>
-      </div><!-- /.media /.callout -->
-    </div><!-- /.l-block-top -->
+    <div class="l-media callout">
+      <svg class="l-media__left callout__icon icon" role="img" aria-labelledby="pencil-icon">
+        <title id="pencil-icon"><?php _e('Pencil', 'sage'); ?></title>
+        <use xlink:href="#icon-pencil2"></use>
+      </svg>
+      <div class="l-media__body">
+        <h2 class="u-margin-all-none"><?php _e('Latest Writing', 'sage'); ?></h2>
+        <?php
+          // Category Tags
+          get_template_part('templates/cat-tag', get_post_type() != 'post' ? get_post_type() : get_post_format());
+        ?>
+      </div>
+    </div><!-- /.media /.callout -->
 
     <div class="l-container">
 
       <article class="post" id="post-placehold">
-        <h3>'Hello World' + more post coming soon...</h3>
+        <h3 class="u-margin-b-lg">'Hello World' + more post coming soon...</h3>
       </article>
 <!--       <?php
         // Set up WP_query

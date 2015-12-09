@@ -12,23 +12,34 @@
 
 .feature {
   position: relative;
-  margin: 0 0 u(rem($base-unit));
-  padding: u(rem($base-unit / 2));
-  background-color: $color__grey;
+  // margin: 0 0 u(rem($base-unit));
+  padding-top: u(rem($base-unit));
+  background-color: $color__white;
   overflow: hidden;
-  &:hover,
-  &:active,
-  &:focus {
-    // Change child items on hover
-    .feature__after {
-      // opacity: .25;
-    }
+}
+
+.feature--decor {
+  background: linear-gradient(to bottom, $color__white 0%, rgba($color__offwhite, 1) 100%);
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: u(rem(3));
+    background: linear-gradient(to bottom, transparent 0%, rgba($color__grey, .35) 100%);
+    content: '';
   }
 }
 
 .feature__item {
   max-width: u(rem($wide-container__max-width));
   min-height: u(rem(200));
+}
+
+.feature__title {
+  margin-bottom: u(rem($base-margin));
+  font-size: em($h2-font-size);
+  line-height: 1;
 }
 
 .feature__text {

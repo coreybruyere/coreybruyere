@@ -11,8 +11,10 @@
 
 .post {
   margin-bottom: u(rem($base-unit));
-  padding: u(rem($base-unit)) 0 u(rem($base-unit - $base-margin));
-  border-bottom: 1px solid $color__grey--light;
+  padding: u(rem($base-unit)) u(rem($base-unit)) u(rem($base-unit - $base-margin));
+  border-radius: 4px;
+  background-color: $color__white;
+  box-shadow: 0 u(rem(1)) u(rem(1)) u(rem(1)) rgba($color__grey, .35);
   // &:last-of-type {
   //   border-bottom: 0;
   // }

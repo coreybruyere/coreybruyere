@@ -197,8 +197,10 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 add_image_size('hero-1x', 765, 400);
 add_image_size('hero-2x', 1415, 740);
 add_image_size('hero-3x', 2835, 1480);
-add_image_size('featured-full-1x', 700, 300);
-add_image_size('featured-full-2x', 1400, 600);
-add_image_size('featured-clip-1x', 500, 450);
-add_image_size('featured-clip-2x', 1000, 900);
+add_image_size('featured-full-2x', 1200, 675);
+add_image_size('featured-full-3x', 1800, 1005);
+add_image_size('featured-medium-2x', 400, 500);
+add_image_size('featured-medium-3x', 600, 750);
+add_image_size('featured-small-2x', 260, 460);
+add_image_size('featured-small-3x', 390, 690);
 

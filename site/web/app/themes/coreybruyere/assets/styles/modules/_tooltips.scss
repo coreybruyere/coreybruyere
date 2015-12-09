@@ -37,6 +37,7 @@ $placement:        data-placement;
     outline: none;
     font-size: u(rem(12));
     text-decoration: none;
+    content: '';
     opacity: 0;
     visibility: hidden;
   }
