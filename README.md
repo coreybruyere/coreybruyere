@@ -1,3 +1,4 @@
 # coreybruyere
-Full roots project
+Full roots project.
+
 This project is now hosted at Gitlab
