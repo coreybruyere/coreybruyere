@@ -6,4 +6,4 @@
 
 # Hello world!
 
-Welcome to my Github webpage! This page once hosted my v2 of personal website that was built with Roots and Wordpress, that can now be found over at [Gitlab](https://gitlab.com/u/coreybruyere/projects). This web page has been repurposed to share my thoughts and images I find interesting. Thanks for visiting!
+Welcome to my Github webpage! This page once hosted v2 of personal website (which was built with Roots and Wordpress), that can now be found over at [Gitlab](https://gitlab.com/u/coreybruyere/projects). This web page has been repurposed to share my thoughts along with images from the world wide web that I find interesting. Thanks for visiting!
