@@ -8,7 +8,11 @@
 
 # Hello world 👋
 
-Welcome to my Github webpage! This page once hosted v2 of personal website (which was built with Roots and Wordpress and can now be found over at [Gitlab](https://gitlab.com/coreybruyere/coreybruyere)). The newest version (temporary, while I work on v4) of my personal website can be found [here](https://github.com/coreybruyere/coreybruyere-v3). This web page <sup>(repo)</sup> has been repurposed to share my thoughts along with images from the world wide web that I find interesting. Thanks for visiting!
+Welcome to my Github webpage! 
+
+This page once hosted v2 of personal website (which was built with Roots and Wordpress and can now be found over at [Gitlab](https://gitlab.com/coreybruyere/coreybruyere)). The newest version (temporary, while I work on v4) of my personal website can be found [here](https://github.com/coreybruyere/coreybruyere-v3). 
+
+This web page <sup>(repo)</sup> has been repurposed to share my thoughts along with images from the world wide web that I find interesting. Thanks for visiting!
 
 
 <!-- <div align="center">
